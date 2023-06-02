@@ -1,6 +1,7 @@
 import './App.css';
 import Home from './pages/home/Home';
 import Profile from './pages/profile/Profile';
+import Footer from './components/footer/Footer';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 function App() {
@@ -13,9 +14,9 @@ function App() {
                     {/* If you want to add your page add it as the Route below and add the name of the page
                         like this path="/example", also change the element to the component you want to show */}
                     <Route path="/" element={<Home />} />
-                    <Route path="/profile" element={<Profile />} />
                 </Routes>
             </div>
+            <Footer />
         </div>
     </Router>
   );
