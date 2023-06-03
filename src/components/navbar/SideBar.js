@@ -22,10 +22,10 @@ const Nav = styled.nav`
 const SideBar = () => {
     return (
         <>
-            <div className="logoContainer">
-                <Logo />
-            </div>
             <Nav>
+                <div className="logoContainer">
+                    <Logo />
+                </div>
                 <UsersName />
                 {SideBarData.map((item, index) => {
                     return <SubMenu item={item} key={index} />
