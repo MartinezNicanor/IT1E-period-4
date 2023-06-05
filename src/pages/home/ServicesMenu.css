@@ -48,6 +48,7 @@ h3{
     color: white;
     border-radius: 2vh;
     margin-bottom: 3vh;
+    margin-right: 2vh;
 }
 
 .assignmentsContainer{
@@ -58,6 +59,7 @@ h3{
     padding: 0vh 1vh 0vh 1.5vh;
     color: white;
     border-radius: 2vh;
+    margin-bottom: 3vh;
 }
 
 .flashCardsContainer{
@@ -68,6 +70,7 @@ h3{
     padding: 0vh 1vh 0vh 1.5vh;
     color: white;
     border-radius: 2vh;
+    margin-right: 2vh;
 }
 
 .progressContainer{
