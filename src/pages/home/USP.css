@@ -1,0 +1,32 @@
+.USPContainer{
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    margin: 10vh 3vh 3vh 6vh;
+}
+.USPheader{
+    display: flex;
+    grid-column: 5/9;
+    text-align: center;
+    color: #3E76D5;
+}
+.flashCardSystem{
+    display: flex;
+    grid-column: 1/4;
+    flex-direction: column;
+    text-align: center;
+}
+
+.aiIncorporation{
+    display: flex;
+    grid-column: 5/8;
+    flex-direction: column;
+    text-align: center;
+}
+
+.community{
+    display: flex;
+    grid-column: 9/12;
+    flex-direction: column;
+    text-align: center;
+}
+

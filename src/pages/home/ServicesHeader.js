@@ -14,7 +14,7 @@ const ServicesHeader = () => {
             fillMode="none">
                 <h2 className='ourServices'>Our Services</h2>
                 <h1>Check out some of the cool services we provide</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <p>We provide a wide range of services to help students study for their exams. Whether it's coding or simply Information Management, we can help with it all!</p>
         </MovingText>
     )
 }
