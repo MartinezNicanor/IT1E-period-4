@@ -1,6 +1,7 @@
 import './App.css';
 import Home from './pages/home/Home';
 import Profile from './pages/profile/Profile';
+import AssignmentsTopics from './pages/AssignmentsTopics';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
                         like this path="/example", also change the element to the component you want to show */}
                     <Route path="/" element={<Home />} />
                     <Route path="/profile" element={<Profile />} />
+                    <Route path="/assignmentsTopics" element={<AssignmentsTopics />} />
                 </Routes>
             </div>
         </div>
