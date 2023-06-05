@@ -1,8 +1,8 @@
 import React from "react";
 import "./../css/components.css";
-import email from './../../../images/letterPhoto.png';
-import profile from './../../../images/personPhoto.png';
-import lock from './../../../images/lockPhoto.png';
+import email from './../../../assets/images/personPhoto.png';
+import profile from './../../../assets/images/letterPhoto.png';
+import lock from './../../../assets/images/lockPhoto.png';
 
 const Input = ({label, photo}) => {
         if(photo === "email") {

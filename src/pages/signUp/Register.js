@@ -1,9 +1,11 @@
 import React from "react";
+import { useNavigate } from 'react-router-dom';
 import './css/register.css';
 import Logo from "./components/FullLogo.js";
 import Input from "./components/Input.js";
 import Button from './components/Button';
 import Link from './components/Link.js';
+
 function Register() {
     return (
         <>
@@ -19,8 +21,14 @@ function Register() {
 }
 
 const RegisterBox = () => {
+    const navigate = useNavigate();
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        navigate('/login');
+    }
     return (
-        <form className = {"registerBox"} /*onSubmit={}*/>
+        <form className = {"registerBox"} onSubmit={handleSubmit}>
             <div className = {"topFlex"}>
                 <div className = {"leftFlex"}>
                     <Input label={"First Name:"} photo={"person"} />
