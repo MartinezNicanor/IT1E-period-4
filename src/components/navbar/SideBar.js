@@ -1,5 +1,4 @@
 import React from 'react'
-import styled from "styled-components"
 import { SideBarData } from './SideBarData';
 import SubMenu from './SubMenu';
 import Logo from './Logo';
@@ -8,21 +7,12 @@ import UsersName from './UsersName';
 import "./usersName.css";
 import Logout from './Logout';
 import "./logout.css";
+import "./Navbar.css";
 
-
-const Nav = styled.nav`
-    font-family: Montserrat;
-    width: 15vw;
-    height: 98vh;
-    padding: 1vh;
-    position: fixed;
-    margin-left: 3vh;
-`;
 
 const SideBar = () => {
     return (
-        <>
-            <Nav>
+            <nav>
                 <div className="logoContainer">
                     <Logo />
                 </div>
@@ -31,8 +21,7 @@ const SideBar = () => {
                     return <SubMenu item={item} key={index} />
                 })}
                 <Logout />
-            </Nav>
-        </>
+            </nav>
     );
 }
 

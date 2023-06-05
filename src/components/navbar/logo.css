@@ -1,11 +1,11 @@
 .logoContainer{
-    margin-left: 1.5vh;
+    margin-left: 1vh;
 }
 
 .logo{
-    margin: 3vh 0.63vh 2.53vh 1vh;
+    margin: 3vh 0.63vh 2.53vh 0vh;
 }
 
 .logo > img{
-    width: 13.5rem;
+    width: 13vw;
 }

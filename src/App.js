@@ -7,7 +7,10 @@ function App() {
     return (
         <Router>
             <div className="gridContainer">
-                <SideBar /> {/* Replace this div with the nav component */}
+                <div className="nav">
+                <SideBar /> 
+                </div>
+               
                 <div className="mainContent">
                     <Routes>
                         {/* If you want to add your page add it as the Route below and add the name of the page
