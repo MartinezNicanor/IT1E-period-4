@@ -9,4 +9,5 @@
 }
 .mainContent {
     grid-column: 3/13;
+    padding: 1vh 7vw;
 }
