@@ -15,7 +15,7 @@ function App() {
                         like this path="/example", also change the element to the component you want to show */}
                     <Route path="/" element={<Home />} />
                     <Route path="/profile" element={<Profile />} />
-                    <Route path="/assignmentsTopics" element={<AssignmentsTopics />} />
+                    <Route path="/assignments" element={<AssignmentsTopics />} />
                 </Routes>
             </div>
         </div>
