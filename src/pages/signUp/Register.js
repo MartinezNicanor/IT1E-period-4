@@ -9,26 +9,17 @@ import Link from './components/Link.js';
 function Register() {
     return (
         <>
-            <div className = {"container"}>
-                <div className = "logoBox">
-                   <Logo />
-                </div>
-
-                <RegisterBox />
+            <div className = "logoBox">
+               <Logo />
             </div>
+            <RegisterBox />
         </>
     )
 }
 
 const RegisterBox = () => {
-    const navigate = useNavigate();
-
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        navigate('/login');
-    }
     return (
-        <form className = {"registerBox"} onSubmit={handleSubmit}>
+        <form className = {"registerBox"} /*onSubmit={handleRegister}*/>
             <div className = {"topFlex"}>
                 <div className = {"leftFlex"}>
                     <Input label={"First Name:"} photo={"person"} />
