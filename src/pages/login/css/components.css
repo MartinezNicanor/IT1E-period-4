@@ -1,0 +1,62 @@
+.logo{
+    height: 19rem;
+    width: 20rem;
+    margin-top: -3.7vh;
+}
+
+.logoBox{
+    display: flex;
+    grid-column: 6/8;
+    justify-content: center;
+}
+
+.input{
+    border: 0;
+    height: 6vh;
+    width: 15vw;
+    font-size: 1.2rem;
+    border-radius: 0 10px 10px 0;
+}
+
+.inputBox{
+    display: flex;
+}
+
+.inputPhoto{
+    height: 6.2vh;
+    border-radius: 10px 0 0 10px;
+}
+
+.label{
+    color: #3E76D5;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.button{
+    border: 0;
+    background-color: #3E76D5;
+    color: white;
+    font-size: 1.3rem;
+    width: 7vw;
+    height: 3.6vh;
+    border-radius: 10px;
+}
+
+.button:hover{
+    background-color: #5378BD;
+    box-shadow: 1px 1px 3px black;
+}
+
+.link{
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: #5B87D1;
+    font-weight: bold;
+    padding-top: 2vh;
+    margin-bottom: -2vh;
+}
+
+.link:hover{
+    color: #5378BD;
+}
