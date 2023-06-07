@@ -1,0 +1,61 @@
+.selectATopic{
+    font-size: 1.6em;
+}
+
+.assignmentTopicDesc{
+    font-size: 1.2em;
+}
+
+.assignmentsTopicsContainer{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+
+}
+
+.htmlCssContainer{
+    display: flex;
+    justify-content: space-evenly;
+    grid-column: 1/6;
+    border: solid #3E76D5 2px;
+    padding: 2vh;
+    border-radius: 2vh;
+    background-color: #3E76D5;
+}
+.htmlvec{
+    width: 8vw;
+}
+.htmlCssDesc{
+    grid-column: 7/13;
+}
+
+.phpContainer{
+    display: flex;
+    justify-content: space-evenly;
+    grid-column: 7/13;
+    border: solid #3E76D5 2px;
+    padding: 2vh;
+    border-radius: 2vh;
+    background-color: #3E76D5;
+}
+.phpvec{
+    width: 6vw;
+}
+.phpDesc{
+    grid-column: 1/6;
+}
+
+.javaContainer{
+    display: flex;
+    justify-content: space-evenly;
+    grid-column: 1/6;
+    border: solid #3E76D5 2px;
+    padding: 2vh;
+    border-radius: 2vh;
+    background-color: #3E76D5;
+}
+.javavec{
+    width: 6vw;
+}
+.javaDesc{
+    grid-column: 7/13;
+}
