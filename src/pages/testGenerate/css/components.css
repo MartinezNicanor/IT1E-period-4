@@ -1,0 +1,36 @@
+.topicButton{
+    display: flex;
+    justify-content: space-between;
+    height: 8vh;
+    align-items: center;
+    padding: 0 2vw 0 2vw;
+    background-color: #ECECEC ;
+    border-radius: 10px;
+    color: #3E76D5;
+    margin: 3vh 0 3vh 0;
+    font-size: 1vw;
+    transition: transform .2s;
+}
+
+.topicButton:hover{
+    box-shadow: 3px 3px 1px;
+    transform: scale(1.01);
+}
+
+.subHeader{
+    margin: 5vh 0 5vh 0;
+    color: #3E76D5;
+}
+
+.topicMenu{
+    display: flex;
+    justify-content: space-between;
+    height: 6vh;
+    align-items: center;
+    padding: 0 2vw 0 2vw;
+    background-color: #ECECEC;
+    border-radius: 10px;
+    color: #3E76D5;
+    font-size: 1vw;
+    transition: transform .2s;
+}

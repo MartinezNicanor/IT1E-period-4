@@ -3,6 +3,7 @@ import Home from './pages/home/Home';
 import SideBar from "./components/navbar/SideBar";
 import Profile from './pages/profile/Profile';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import GenerateTestPage from "./pages/testGenerate/generateTest";
 
 function App() {
     return (
@@ -18,6 +19,7 @@ function App() {
                     <Route path="/" element={<Home />} />
                     <Route path="/" element={<Home />} />
                     <Route path="/profile" element={<Profile />} />
+                    <Route path="/tests" element={<GenerateTestPage />} />
                 </Routes>
                 </div>
             </div>
