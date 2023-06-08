@@ -2,6 +2,7 @@ import './App.css';
 import Home from './pages/home/Home';
 import SideBar from "./components/navbar/SideBar";
 import Profile from './pages/profile/Profile';
+import CreateNewSet from "./pages/createNewFlashSet/CreateNewSet";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
                     <Route path="/" element={<Home />} />
                     <Route path="/" element={<Home />} />
                     <Route path="/profile" element={<Profile />} />
+                    <Route path="/newFlashcardsSet" element={<CreateNewSet />} />
                 </Routes>
                 </div>
             </div>
