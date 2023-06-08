@@ -59,3 +59,8 @@
 .javaDesc{
     grid-column: 7/13;
 }
+
+.svgLine{
+    position: absolute; 
+    z-index: -1; 
+}
