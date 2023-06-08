@@ -2,6 +2,8 @@ import './App.css';
 import Login from "./pages/login/Login";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import MaybeShowNavBar from "./pages/login/components/MaybeShowNavBar";
+import Home from './pages/home/Home';
+import Profile from './pages/profile/Profile';
 
 function App() {
     return (
@@ -14,7 +16,10 @@ function App() {
                     <Route path={"/login"} element={<Login />} />
                 </Routes>
                 <div className="mainContent">
-
+                    <Routes>
+                        <Route path={"/"} element={<Home />} />
+                        <Route path={"/"} element={<Profile />} />
+                    </Routes>
                 </div>
             </div>
         </Router>
