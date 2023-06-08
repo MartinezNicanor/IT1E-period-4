@@ -1,0 +1,72 @@
+.overviewHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 3vh;
+}
+
+.overviewHeader a {
+    text-decoration: none;
+}
+
+.postsList a {
+    text-decoration: none;
+    color: black;
+}
+
+.askButton {
+    border: 2px solid #3E76D5;
+    border-radius: 12px;
+    background-color: #3E76D5;
+    color: white;
+    padding: 1.5vh 1.5vw;
+    font-family: 'Montserrat';
+    font-size: 1em;
+    font-weight: 600;
+    text-decoration: none;
+    list-style: none;
+}
+
+.postsList {
+    margin-top:3vh;
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+}
+
+.postPreview{
+    padding: 2vh 3vw;
+    background-color: #ECECEC;
+    border-radius: 20px;
+    display: flex;
+    gap: 5vw;
+    align-items: center;
+}
+
+.postPreview:hover {
+    box-shadow: #3E76D5 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;}
+
+.forumOverview {
+    padding: 0 6vw;
+}
+
+.postDescription {
+    width: 45vw;
+}
+
+.postTitle {
+    color: #3E76D5;
+}
+
+.author {
+    color: #3E76D5;
+    margin-bottom: 0;
+}
+
+.date {
+    margin-top: 0;
+}
+
+.postAuthor p {
+    white-space: nowrap;
+}
