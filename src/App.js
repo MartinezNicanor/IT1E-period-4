@@ -1,7 +1,7 @@
 import './App.css';
 import Home from './pages/home/Home';
 import Profile from './pages/profile/Profile';
-import AssignmentsTopics from './pages/AssignmentsTopics';
+import AssignmentsTopics from './pages/assignments/assignmentsTopics/AssignmentsTopics';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 function App() {

@@ -1,9 +1,9 @@
 import React from 'react'
 import './AssignmentsTopics.css'
-import Header from '../components/header/Header'
-import htmlCssVec from '../assets/images/htmlcss.svg'
-import phpVec from '../assets/images/php.svg'
-import javaVec from '../assets/images/java.svg'
+import Header from '../../../components/header/Header'
+import htmlCssVec from '../../../assets/images/htmlcss.svg'
+import phpVec from '../../../assets/images/php.svg'
+import javaVec from '../../../assets/images/java.svg'
 
 
 const AssignmentsTopics = () => {
