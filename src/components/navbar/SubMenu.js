@@ -17,7 +17,7 @@ const SideBarLink = styled(Link)`
     &:hover {
       color: #6aa0fc;
       cursor: pointer;
-      font-size: 1.4vw;
+      font-size: 1.35vw;
     }
 `;
 const SideBarLabel = styled.span`
