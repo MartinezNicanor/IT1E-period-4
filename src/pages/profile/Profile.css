@@ -63,7 +63,7 @@
     justify-content: space-between;
 }
 
-form button {
+.saveButton {
     color: #3E76D5;
     background-color: white;
     border: #3E76D5;
