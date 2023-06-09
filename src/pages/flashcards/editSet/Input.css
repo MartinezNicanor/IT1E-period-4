@@ -1,0 +1,20 @@
+.enterTitleBox {
+    background-color: #ECECEC;
+    border-radius: 4vh;
+    padding: 0.8vh 4vh 1.5vw 1.5vw;
+    margin-top: 2vh;
+}
+
+.enterTitleBox > h2 {
+    color: #3E76D5;
+}
+
+.inputs {
+    width: 60vw;
+    height: 5vh;
+    font-size: 15px;
+    color: #3E76D5;
+    border: none;
+    border-radius: 2vh;
+    padding-left: 1vw;
+}

@@ -1,0 +1,16 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 3vw 0 3vw;
+}
+
+.titleText {
+    padding: 3.2vh 4.3vw;
+    color: #3E76D5;
+    border-bottom: solid #3E76D5;
+}
+
+.enterTitleBox > p {
+    color: #3E76D5;
+    padding-left: 2.1vw;
+}

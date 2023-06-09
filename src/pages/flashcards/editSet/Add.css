@@ -1,0 +1,18 @@
+.divAddButton {
+    display: flex;
+    justify-content: end;
+    margin-top: 5vh;
+    margin-bottom: 2vh;
+    align-items: center;
+}
+
+.addButton {
+    width: 11vw;
+    height: 6vh;
+    background-color: #3E76D5;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 2vh;
+    font-weight: bold;
+}
