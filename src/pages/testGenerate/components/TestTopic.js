@@ -1,17 +1,17 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { FaArrowRight } from 'react-icons/fa';
 
-const TestTopic = ({label}) => {
-    const [isMenuOpen, setMenuOpen] = useState(false);
+const TestTopic = ({ label }) => {
+    const [openTopic, setOpenTopic] = useState(null);
     const menuRef = useRef(null);
 
     const handleClick = () => {
-        setMenuOpen(!isMenuOpen);
+        setOpenTopic((prevOpenTopic) => (prevOpenTopic === label ? null : label));
     };
 
     const handleClickOutside = (event) => {
         if (menuRef.current && !menuRef.current.contains(event.target)) {
-            setMenuOpen(false);
+            setOpenTopic(null);
         }
     };
 
@@ -24,17 +24,17 @@ const TestTopic = ({label}) => {
 
     return (
         <>
-            <div className={"topicButton"} ref={menuRef} onClick={handleClick}>
-                <p className={"topicLabel"}>{label}</p>
+            <div className="topicButton" ref={menuRef} onClick={handleClick}>
+                <p className="topicLabel">{label}</p>
                 <FaArrowRight />
             </div>
-            {isMenuOpen && (
-                <div className={"topicMenu"}>
+            {openTopic === label && (
+                <div className={`topicMenu active`}>
                     This is the menu
                 </div>
             )}
         </>
     );
-}
+};
 
 export default TestTopic;

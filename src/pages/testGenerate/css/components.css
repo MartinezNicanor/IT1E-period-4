@@ -2,12 +2,13 @@
     display: flex;
     justify-content: space-between;
     height: 8vh;
+    width: 64vw;
     align-items: center;
     padding: 0 2vw 0 2vw;
     background-color: #ECECEC ;
     border-radius: 10px;
     color: #3E76D5;
-    margin: 3vh 0 3vh 0;
+    margin: 3vh 0 2vh 0;
     font-size: 1vw;
     transition: transform .2s;
 }
@@ -26,11 +27,25 @@
     display: flex;
     justify-content: space-between;
     height: 6vh;
+    width: 60vw;
     align-items: center;
     padding: 0 2vw 0 2vw;
     background-color: #ECECEC;
     border-radius: 10px;
     color: #3E76D5;
     font-size: 1vw;
-    transition: transform .2s;
+    margin-top: -0.5vh;
+    margin-bottom: 1.5vh;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.topicMenu.active {
+    opacity: 1;
+}
+
+.topics{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
