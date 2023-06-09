@@ -6,7 +6,6 @@ import * as MdIcons from 'react-icons/md';
 export const SideBarData = [
     {
         title: "Assignments",
-        path: "/assignments",
         icon: <BsIcons.BsJournalCode />,
         iconClosed: <BsIcons.BsArrowDownShort />,
         iconOpened: <BsIcons.BsArrowUpShort />,
@@ -28,22 +27,21 @@ export const SideBarData = [
     },
     {
         title: "Tests",
-        path: "/tests",
         icon: <BsIcons.BsFileEarmarkCode />,
         iconClosed: <BsIcons.BsArrowDownShort />,
         iconOpened: <BsIcons.BsArrowUpShort />,
         subNav: [
             {
                 title: "HTML/CSS",
-                path: "/tests/html",
+                path: "/tests",
             },
             {
                 title: "PHP",
-                path: "/tests/php",
+                path: "/tests",
             },
             {
                 title: "Java",
-                path: "/tests/java",
+                path: "/tests",
             },
         ]
 
