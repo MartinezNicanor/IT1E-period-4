@@ -1,0 +1,84 @@
+.nameTitle {
+    font-size: 2.2em;
+    font-weight: bold;
+    color: #3E76D5;
+    margin: 0;
+}
+
+.emailTitle {
+    color: #3E76D5;
+}
+
+.forms {
+    display: flex;
+    justify-content: space-evenly;
+    color: white;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+}
+
+.forms form {
+    display: flex;
+    flex-direction: column;
+    background-color: #3E76D5;
+    padding: 4vh;
+    border-radius: 10px;
+    gap: 25px;
+}
+
+.inputs input {
+    width: 25vw;
+    height: 3vh;
+    border: #3E76D5;
+    border-radius: 10px;
+    padding: 8px;
+}
+
+.inputs label {
+    font-size: 1em;
+    font-weight: 200;
+}
+
+.inputs {
+    display: flex;
+    gap: 10px;
+}
+
+.inputContainer {
+    margin-bottom: 10px;
+}
+
+.inputTitle {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-top: 0;
+}
+
+.userInfo {
+    margin: 5vh 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+form button {
+    color: #3E76D5;
+    background-color: white;
+    border: #3E76D5;
+    border-radius: 10px;
+    padding: 8px;
+    width: 5vw;
+    align-self: center;
+    font-weight: 700;
+}
+
+.defaultClass{
+    width: 6vw;
+    object-fit: cover;
+    margin-right: 4vw;
+    border-radius: 25%;
+    padding: 6px;
+    border: 3px solid #3E76D5;
+}
