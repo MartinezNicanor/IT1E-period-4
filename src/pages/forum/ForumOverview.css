@@ -44,10 +44,7 @@
 }
 
 .postPreview:hover {
-    box-shadow: #3E76D5 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;}
-
-.forumOverview {
-    padding: 0 6vw;
+    box-shadow: #3E76D5 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
 }
 
 .postDescription {
@@ -69,4 +66,34 @@
 
 .postAuthor p {
     white-space: nowrap;
+}
+
+.forumOverview {
+    display: flex;
+    flex-direction: column;
+    padding: 0 6vw;
+}
+
+.filterButtons {
+    align-self: end;
+    display: flex;
+    gap: 0.3vw;
+}
+
+.filterButtons button {
+    background-color: #3E76D5;
+    border: 0;
+    color: white;
+    padding: 1vh 0.9vw;
+    font-size: 0.9em;
+    font-weight: 600;
+    margin: 0.5vh 0;
+}
+
+.relevant {
+    border-radius: 8px 0px 0px 8px;
+}
+
+.yours {
+    border-radius: 0px 8px 8px 0px;
 }

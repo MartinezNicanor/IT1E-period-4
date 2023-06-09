@@ -2,7 +2,7 @@ import './App.css';
 import Home from './pages/home/Home';
 import SideBar from "./components/navbar/SideBar";
 import Profile from './pages/profile/Profile';
-import Overview from './pages/forum/Overview';
+import ForumOverview from './pages/forum/ForumOverview';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 function App() {
@@ -18,7 +18,7 @@ function App() {
                     like this path="/example", also change the element to the component you want to show */}
                     <Route path="/" element={<Home />} />
                     <Route path="/profile" element={<Profile />} />
-                    <Route path="/forum" element={<Overview />} />
+                    <Route path="/forum" element={<ForumOverview />} />
                 </Routes>
                 </div>
             </div>
