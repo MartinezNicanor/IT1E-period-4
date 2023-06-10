@@ -1,0 +1,26 @@
+.descHeader{
+    margin-bottom: 8vh;
+}
+
+
+.assignmentBox{
+    display: flex;
+    justify-content: space-between;
+    background-color: #ECECEC;
+    margin-bottom: 3vh;
+    border-radius: 1.2vh;
+    padding: 0vh 1vw;
+    align-items: center;
+    
+}
+
+a{
+    text-decoration: none;
+    color: #3E76D5;
+    
+}
+
+a :hover{
+    font-weight: bold;
+}
+
