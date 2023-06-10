@@ -1,0 +1,19 @@
+.prevAndNextBtn{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.prevContainer{
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 1vw;
+}
+
+.nextContainer{
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 1vw;
+}
