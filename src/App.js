@@ -3,13 +3,14 @@ import Home from './pages/home/Home';
 import SideBar from "./components/navbar/SideBar";
 import Profile from './pages/profile/Profile';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Error from "./pages/error404/Error";
 
 function App() {
     return (
         <Router>
             <div className="gridContainer">
                 <div className="nav">
-                  <SideBar /> 
+                  <SideBar />
                 </div>
                 <div className="mainContent">
                 <Routes>
@@ -18,6 +19,7 @@ function App() {
                     <Route path="/" element={<Home />} />
                     <Route path="/" element={<Home />} />
                     <Route path="/profile" element={<Profile />} />
+                    <Route path="*" element={<Error />} />
                 </Routes>
                 </div>
             </div>

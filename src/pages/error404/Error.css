@@ -1,0 +1,27 @@
+.notFound {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5vh;
+    font-size: 5vh;
+    position: relative;
+}
+
+.textOverlay {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    /*align-items: center;*/
+    text-align: center;
+    margin-left: 19vw;
+}
+
+.textOverlay > h1 {
+    color: #3e76d5;
+    margin-top: 20vh;
+    margin-bottom: 0;
+}
+
+.textOverlay > h2 {
+    margin-top: 2vh;
+}
+
