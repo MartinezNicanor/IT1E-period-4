@@ -1,27 +1,34 @@
 .notFound {
     display: flex;
     flex-direction: column;
-    margin-top: 5vh;
-    font-size: 5vh;
+    align-items: center;
+    margin-top: 10vh;
     position: relative;
+    background-image: url("../../assets/images/errBackground.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.notFound > img {
+    width: 50vw;
 }
 
 .textOverlay {
     display: flex;
     position: absolute;
     flex-direction: column;
-    /*align-items: center;*/
     text-align: center;
-    margin-left: 19vw;
+    font-size: 4vh;
 }
 
 .textOverlay > h1 {
     color: #3e76d5;
-    margin-top: 20vh;
+    margin-top: 14vh;
     margin-bottom: 0;
 }
 
 .textOverlay > h2 {
     margin-top: 2vh;
 }
+
 
