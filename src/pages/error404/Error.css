@@ -32,4 +32,6 @@
     margin-top: 2vh;
 }
 
-
+.textOverlay > a:hover {
+    text-decoration: underline #3e76d5;
+}
