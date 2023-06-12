@@ -7,10 +7,11 @@
     background-image: url("../../assets/images/errBackground.png");
     background-size: cover;
     background-position: center;
+    height: 90vh;
 }
 
 .notFound > img {
-    width: 50vw;
+    width: 55vw;
 }
 
 .textOverlay {
@@ -23,7 +24,7 @@
 
 .textOverlay > h1 {
     color: #3e76d5;
-    margin-top: 14vh;
+    margin-top: 15vh;
     margin-bottom: 0;
 }
 
