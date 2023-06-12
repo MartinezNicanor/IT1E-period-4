@@ -35,7 +35,7 @@ const OVerview = () => {
             <Header title="Forum" />
             <div className="forumOverview">
                 <div className="overviewHeader">
-                    <h3 className="forumTitle">Explore our forum</h3>
+                    <h2 className="forumTitle">Explore our forum</h2>
                     <Link to={'/askForum'}>
                         <p className="askButton">Ask a question</p>
                     </Link>
