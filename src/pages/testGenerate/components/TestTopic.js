@@ -1,38 +1,26 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useState } from 'react';
 import { FaArrowRight } from 'react-icons/fa';
+import PopUpMenu from './PopUpMenu.js';
 
 const TestTopic = ({ label }) => {
-    const [openTopic, setOpenTopic] = useState(null);
-    const menuRef = useRef(null);
+    const [showPopUp, setShowPopUp] = useState(false);
 
-    const handleClick = () => {
-        setOpenTopic((prevOpenTopic) => (prevOpenTopic === label ? null : label));
+    const openPopUp = () => {
+        setShowPopUp(true);
     };
 
-    const handleClickOutside = (event) => {
-        if (menuRef.current && !menuRef.current.contains(event.target)) {
-            setOpenTopic(null);
-        }
+    const closePopUp = () => {
+        setShowPopUp(false);
     };
-
-    useEffect(() => {
-        document.addEventListener('mousedown', handleClickOutside);
-        return () => {
-            document.removeEventListener('mousedown', handleClickOutside);
-        };
-    }, []);
 
     return (
         <>
-            <div className="topicButton" ref={menuRef} onClick={handleClick}>
+            <div className="topicButton" onClick={openPopUp}>
                 <p className="topicLabel">{label}</p>
                 <FaArrowRight />
             </div>
-            {openTopic === label && (
-                <div className={`topicMenu active`}>
-                    This is the menu
-                </div>
-            )}
+            {showPopUp && <PopUpMenu onClose={closePopUp} /> }
+
         </>
     );
 };
