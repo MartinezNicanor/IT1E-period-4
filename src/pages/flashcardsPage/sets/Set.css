@@ -1,0 +1,18 @@
+.set {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: 10vw;
+    height: 27vh;
+    background-color: #3e76d5;
+    padding: 1vh;
+    margin-top: 10vh;
+    margin-right: 5vw;
+    text-align: center;
+    border-radius: 3vh;
+}
+
+.set > p {
+    color: white;
+    font-weight: bold;
+}
