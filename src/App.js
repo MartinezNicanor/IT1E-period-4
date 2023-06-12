@@ -19,7 +19,7 @@ function App() {
                     <Route path="/" element={<Home />} />
                     <Route path="/" element={<Home />} />
                     <Route path="/profile" element={<Profile />} />
-                    <Route path="/newFlashcardsSet" element={<CreateNewSet />} />
+                    <Route path="/flashcards-new-set" element={<CreateNewSet />} />
                 </Routes>
                 </div>
             </div>
