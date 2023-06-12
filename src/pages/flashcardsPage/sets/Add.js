@@ -1,9 +1,11 @@
 import React from "react";
-import "./Set.css";
+import "./Add.css";
+import addButton from "../../../assets/images/Add.png"
 
 const Add = () => {
     return (
-        <div className="set">
+        <div className="add">
+            <img src={addButton} alt={"Add"} />
             <p>Add</p>
         </div>
     );

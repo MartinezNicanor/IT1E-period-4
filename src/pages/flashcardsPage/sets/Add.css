@@ -1,4 +1,4 @@
-.set {
+.add {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -8,19 +8,18 @@
     background-color: #3e76d5;
     padding: 1vh;
     margin-top: 10vh;
-    margin-right: 5vw;
     text-align: center;
     border-radius: 3vh;
 }
 
-.set > p {
+.add > p {
     color: white;
     font-weight: bold;
     margin-top: 2vh;
     margin-bottom: 0.5vh;
 }
 
-.set > img {
-    width: 8vw;
-    margin-top: 1vh;
+.add > img {
+    cursor: pointer;
+    width: 7vw;
 }
