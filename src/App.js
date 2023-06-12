@@ -12,7 +12,7 @@ function App() {
         <div className="gridContainer">
             <MaybeShowNavBar>
                 <div className="nav">
-                  <Sidebar />
+                  <SideBar />
                 </div>
             </MaybeShowNavBar>
             <Routes>
