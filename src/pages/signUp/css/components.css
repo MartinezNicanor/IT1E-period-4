@@ -1,7 +1,6 @@
 .logo{
-    height: 19rem;
-    width: 20rem;
-    margin-top: -3.7vh;
+    height: 26.9vh;
+    width: 13vw;
 }
 
 .logoBox{
@@ -12,7 +11,7 @@
 
 .input{
     border: 0;
-    height: 6vh;
+    height: 5.8vh;
     width: 15vw;
     font-size: 1.2rem;
     border-radius: 0 10px 10px 0;
@@ -23,7 +22,7 @@
 }
 
 .inputPhoto{
-    height: 6.2vh;
+    height: 6vh;
     border-radius: 10px 0 0 10px;
 }
 
