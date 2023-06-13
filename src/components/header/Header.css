@@ -1,0 +1,9 @@
+header {
+    border-bottom: 3px solid #3E76D5;
+}
+
+.headerTitle {
+    font-size: 2.2em;
+    font-weight: bold;
+    color: #3E76D5;
+}
