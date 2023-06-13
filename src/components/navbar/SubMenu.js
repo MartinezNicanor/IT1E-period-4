@@ -11,12 +11,13 @@ const SideBarLink = styled(Link)`
     justify-content: space-between;
     align-items: center;
     padding: 0.3vh;
-    font-size: 2.5vh;
+    font-size: 1.3vw;
 
+    
     &:hover {
       color: #6aa0fc;
       cursor: pointer;
-      font-size: 2.55vh;
+      font-size: 1.35vw;
     }
 `;
 const SideBarLabel = styled.span`
@@ -30,13 +31,13 @@ const DropdownLink = styled(Link)`
   justify-content: space-between;
   align-items: center;
   padding: 0.3vh;
-  font-size: 2.1vh;
-  margin-left: 3.5vh;
+  font-size: 1.1vw;
+  margin-left: 2.3vw;
 
   &:hover {
   color: #6aa0fc;
   cursor: pointer;
-  font-size: 2.2vh;
+  font-size: 1.2vw;
 }
 `
 

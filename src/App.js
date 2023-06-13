@@ -2,6 +2,7 @@ import './App.css';
 import Home from './pages/home/Home';
 import SideBar from "./components/navbar/SideBar";
 import Profile from './pages/profile/Profile';
+import ForumOverview from './pages/forum/ForumOverview';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import AssignmentView from './pages/assignments/assignmentsList/AssignmentView';
 
@@ -17,9 +18,9 @@ function App() {
                     {/* If you want to add your page add it as the Route below and add the name of the page
                     like this path="/example", also change the element to the component you want to show */}
                     <Route path="/" element={<Home />} />
-                    <Route path="/" element={<Home />} />
                     <Route path="/profile" element={<Profile />} />
                     <Route path="/assignments" element={<AssignmentView />} />
+                    <Route path="/forum" element={<ForumOverview />} />
                 </Routes>
                 </div>
             </div>
