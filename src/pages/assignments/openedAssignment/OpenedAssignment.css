@@ -1,7 +1,13 @@
+.openedAssignmentContainer{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 2vh;
+}
+
 .prevAndNextBtn{
     display: flex;
     justify-content: space-between;
-
+    grid-column: 1/13;
 }
 
 .prevContainer{
@@ -16,4 +22,20 @@
     align-items: center;
     flex-wrap: nowrap;
     gap: 1vw;
+}
+
+.assignmentTextBox{
+    grid-column: 1/11;
+}
+
+.assignmentTitle{
+    color: #3E76D5;
+}
+
+.assignmentText > p{
+    text-align: justify;
+}
+
+.timerContainer{
+    grid-column: 12/13;
 }

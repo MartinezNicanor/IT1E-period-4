@@ -9,7 +9,7 @@ const OpenedAssignment = () => {
     const assignments = [
         {
             title: "Assignment 1",
-            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Laoreet suspendisse interdum consectetur libero id faucibus nisl. Dolor purus non enim praesent elementum facilisis leo vel fringilla. Id interdum velit laoreet id. Maecenas sed enim ut sem viverra. Ante metus dictum at tempor commodo ullamcorper a. Tempus imperdiet nulla malesuada pellentesque elit. Aenean sed adipiscing diam donec adipiscing tristique risus. At consectetur lorem donec massa sapien faucibus et molestie. Sed vulputate mi sit amet mauris commodo quis imperdiet massa.",
+            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sagittis luctus turpis, a tempus velit cursus nec. Donec quis turpis sodales, tincidunt leo eget, imperdiet eros. Curabitur eu placerat urna. Fusce porttitor sem lacinia sem sagittis porttitor. Pellentesque euismod laoreet finibus. Donec ornare dolor vel libero luctus porttitor. Vestibulum mattis et magna sit amet luctus. Morbi fringilla tellus elit, non gravida nulla euismod et. Sed at tellus ultricies dui lobortis aliquam nec sit amet sem. Vivamus at vulputate ipsum. Duis tristique quis nisi at finibus. Nunc ipsum massa, aliquam sed maximus sit amet, volutpat et dolor. Cras sit amet tristique lectus. Nunc molestie lobortis dignissim. Nam finibus, nulla vel malesuada laoreet, neque sem aliquam diam, in consectetur nisl orci quis metus. Duis tristique quis nisi at finibus. Nunc ipsum massa, aliquam sed maximus sit amet, volutpat et dolor. Cras sit amet tristique lectus. Nunc molestie lobortis dignissim. Nam finibus, nulla vel malesuada laoreet, neque sem aliquam diam, in consectetur nisl orci quis metus. Duis tristique quis nisi at finibus. Nunc ipsum massa, aliquam sed maximus sit amet, volutpat et dolor. Cras sit amet tristique lectus. Nunc molestie lobortis dignissim. Nam finibus, nulla vel malesuada laoreet, neque sem aliquam diam, in consectetur nisl orci quis metus.",
             id: 1
         }
     ]
@@ -26,7 +26,7 @@ const OpenedAssignment = () => {
                     <h3 className = "next">Next Assignment</h3> <AiIcons.AiOutlineArrowRight/>
                 </div>
             </div>
-            <div className = "assignmentText">
+            <div className = "assignmentTextBox">
                 <h2 className = "assignmentTitle">{assignments[0].title}</h2>
                 <div className = "assignmentText">
                     <p>{assignments[0].text}</p>
@@ -35,9 +35,6 @@ const OpenedAssignment = () => {
             </div>
             <div className = "timerContainer">
                 <Timer />
-                <div className = "assignmentBtnsContainer">
-
-                </div>
             </div>
         </div>
     </div>
