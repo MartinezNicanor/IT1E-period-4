@@ -2,7 +2,7 @@
     margin-top: 5vh;
     margin-bottom: 1vh;
     background-color: #ECECEC;
-    border-radius: 4vh 4vh 0 0;
+    border-radius: 3vh 3vh 0 0;
     padding: 0.8vh 4vh 1.5vw 1.5vw;
 }
 
@@ -13,9 +13,9 @@
 .termInput {
     width: 60vw;
     height: 5vh;
-    font-size: 15px;
+    font-size: 1.1vw;
     color: #3E76D5;
     border: none;
-    border-radius: 2vh;
+    border-radius: 1vh;
     padding-left: 1vw;
 }

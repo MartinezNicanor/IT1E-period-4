@@ -1,6 +1,6 @@
 .enterTitleBox {
     background-color: #ECECEC;
-    border-radius: 4vh;
+    border-radius: 3vh;
     padding: 0.8vh 4vh 1.5vw 1.5vw;
     margin-top: 2vh;
 }
@@ -12,9 +12,9 @@
 .inputs {
     width: 60vw;
     height: 5vh;
-    font-size: 15px;
+    font-size: 1.1vw;
     color: #3E76D5;
     border: none;
-    border-radius: 2vh;
+    border-radius: 1vh;
     padding-left: 1vw;
 }

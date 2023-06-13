@@ -1,6 +1,6 @@
 .definitionBox {
     background-color: #ECECEC;
-    border-radius: 0 0 4vh 4vh;
+    border-radius: 0 0 3vh 3vh;
     padding: 0.8vh 4vh 1.5vw 1.5vw;
 }
 
@@ -11,9 +11,9 @@
 .inputDefinition {
     width: 60vw;
     height: 5vh;
-    font-size: 15px;
+    font-size: 1.1vw;
     color: #3E76D5;
     border: none;
-    border-radius: 2vh;
+    border-radius: 1vh;
     padding-left: 1vw;
 }

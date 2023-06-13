@@ -6,7 +6,7 @@ const Definition = ({label}) => {
         <div className="definitionBox">
             <h2>Definition</h2>
             <input className="inputDefinition"
-                   type={"text"}
+                   type={"textarea"}
                    placeholder={label}
             />
         </div>

@@ -7,7 +7,7 @@
 }
 
 .addButton {
-    width: 11vw;
+    width: 13vw;
     height: 6vh;
     background-color: #3E76D5;
     border: none;
@@ -15,4 +15,5 @@
     cursor: pointer;
     border-radius: 2vh;
     font-weight: bold;
+    font-size: 1.1vw;
 }
