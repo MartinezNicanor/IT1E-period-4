@@ -1,7 +1,16 @@
 .usersName {
-    font-size: 1.3em;
-    padding: 6% 0% 6% 5%;
-    margin-bottom: 10%;
+    font-size: 1.4vw;
+    padding: 2vh 0vw 2vh 1.2vw;
+    margin-bottom: 2.5vh;
     border-top: solid #3E76D5 2px;
     border-bottom: solid #3E76D5 2px;
+    display: flex;
+    align-items: center;
+    gap: 0.5vw;
+    width: 13vw;
+}
+
+a{
+    text-decoration: none;
+    color: #3E76D5;
 }

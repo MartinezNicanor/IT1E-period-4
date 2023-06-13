@@ -5,6 +5,7 @@ import MaybeShowNavBar from "./pages/login/components/MaybeShowNavBar";
 import Home from './pages/home/Home';
 import Profile from './pages/profile/Profile';
 import SideBar from "./components/navbar/SideBar";
+import ForumOverview from './pages/forum/ForumOverview';
 
 function App() {
     return (
@@ -20,8 +21,11 @@ function App() {
                 </Routes>
                 <div className="mainContent">
                     <Routes>
+                        {/* If you want to add your page add it as the Route below and add the name of the page
+                        like this path="/example", also change the element to the component you want to show */}
                         <Route path={"/"} element={<Home />} />
                         <Route path={"/"} element={<Profile />} />
+                        <Route path="/forum" element={<ForumOverview />} />
                     </Routes>
                 </div>
             </div>
