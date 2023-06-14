@@ -40,7 +40,7 @@ const AssignmentsTopics = () => {
                 </div>   
             </div>
             <div className = "javaContainer">
-                <Link to={"assignments/java"}>
+                <Link to={"/assignments/java"}>
                     <img className='javavec' src={javaVec} alt='java logo vector' />
                 </Link>
                 <div className = "javaAssignments">
