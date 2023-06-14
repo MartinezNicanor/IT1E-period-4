@@ -1,7 +1,6 @@
-import './App.css';
 import Login from "./pages/login/Login";
-import Register from './pages/signUp/Register.js';
-import MaybeShowNavBar from './components/maybeNavBar/MaybeNavBar.js';
+import Register from './pages/register/Register.js';
+import MaybeNavBar from './components/maybeNavBar/MaybeNavBar.js';
 import { BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import Home from './pages/home/Home';
 import Profile from './pages/profile/Profile';
@@ -12,25 +11,16 @@ function App() {
   return (
     <Router>
         <div className="gridContainer">
-            <MaybeShowNavBar>
-                <div className="nav">
-                  <SideBar />
-                </div>
-            </MaybeShowNavBar>
-                <Routes>
-                    <Route path={"/register"} element={<Register />} />
-                        <Route path={"/login"} element={<Login />} />
-                    </Routes>
-                <div className="mainContent">
-                    <Routes>
-                        {/* If you want to add your page add it as the Route below and add the name of the page
-                        like this path="/example", also change the element to the component you want to show */}
-                        <Route path={"/"} element={<Home />} />
-                        <Route path={"/"} element={<Profile />} />
-                        <Route path="/forum" element={<ForumOverview />} />
-                    </Routes>
-                </div>
-            </div>
+            <MaybeNavBar>
+                <SideBar />
+            </MaybeNavBar>
+            <Routes>
+                <Route path={"/register"} element={<Register />} />
+                <Route path={"/login"} element={<Login />} />
+                <Route path={"/"} element={<Home />} />
+                <Route path={"/profile"} element={<Profile />} />
+                <Route path="/forum" element={<ForumOverview />} />
+            </Routes>
         </div>
     </Router>
   );
