@@ -6,6 +6,7 @@ import Home from './pages/home/Home';
 import Profile from './pages/profile/Profile';
 import SideBar from "./components/navbar/SideBar";
 import ForumOverview from './pages/forum/ForumOverview';
+import TestPage from './pages/multipleChoiceTest/TestPage';
 
 function App() {
   return (
@@ -15,11 +16,12 @@ function App() {
                 <SideBar />
             </MaybeNavBar>
             <Routes>
-                <Route path={"/register"} element={<Register />} />
-                <Route path={"/login"} element={<Login />} />
-                <Route path={"/"} element={<Home />} />
-                <Route path={"/profile"} element={<Profile />} />
+                <Route path="/register" element={<Register />} />
+                <Route path="/login" element={<Login />} />
+                <Route path="/" element={<Home />} />
+                <Route path="/profile" element={<Profile />} />
                 <Route path="/forum" element={<ForumOverview />} />
+                <Route path="/test" element={<TestPage />} />
             </Routes>
         </div>
     </Router>

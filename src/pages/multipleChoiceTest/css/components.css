@@ -1,0 +1,27 @@
+.subHeader{
+    margin: 5vh 0 5vh 0;
+    color: #3E76D5;
+}
+
+.questionContainer{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    grid-gap: 10px;
+}
+
+.question{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 3vw;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+ul{
+    list-style: none;
+}
+
+li{
+    margin: 1.5vh 0;
+}
