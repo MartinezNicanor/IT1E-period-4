@@ -1,26 +1,31 @@
-.set {
+.setBox {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    width: 10vw;
-    height: 27vh;
+    width: 13vw;
+    height: 24vh;
     background-color: #3e76d5;
     padding: 1vh;
-    margin-top: 10vh;
-    margin-right: 5vw;
     text-align: center;
     border-radius: 3vh;
 }
 
-.set > p {
+.setTitle {
     color: white;
-    font-weight: bold;
+    font-weight: 600;
     margin-top: 2vh;
     margin-bottom: 0.5vh;
 }
 
-.set > img {
-    width: 8vw;
+.setBox > img {
+    width: 9vw;
     margin-top: 1vh;
+}
+
+.setList{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 4vw;
 }

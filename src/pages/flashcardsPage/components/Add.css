@@ -3,23 +3,23 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    width: 10vw;
-    height: 27vh;
+    width: 13vw;
+    height: 24vh;
     background-color: #3e76d5;
     padding: 1vh;
-    margin-top: 10vh;
+    margin-top: 8vh;
     text-align: center;
     border-radius: 3vh;
 }
 
 .add > p {
     color: white;
-    font-weight: bold;
-    margin-top: 2vh;
+    font-weight: 600;
+    margin-top: 3vh;
     margin-bottom: 0.5vh;
 }
 
 .add > img {
-    cursor: pointer;
-    width: 7vw;
+    width: 9vw;
+    margin-top: 1vh;
 }

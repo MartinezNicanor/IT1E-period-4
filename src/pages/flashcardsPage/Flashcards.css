@@ -1,4 +1,9 @@
-.container {
-    display: flex;
-    flex-direction: row;
+.setsContainer {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+.setsBox{
+    grid-column: 2/11;
+    margin-top: 10vh;
 }
