@@ -12,7 +12,7 @@
 .registerContainer {
     grid-column: 5/9;
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
     align-items: center;
     flex-direction: column;
     margin-top: 10vh;
@@ -55,4 +55,5 @@
 .registerInputs {
     display: flex;
     justify-content: space-between;
+    gap: 3vw;
 }
