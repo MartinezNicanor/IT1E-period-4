@@ -4,6 +4,7 @@ import Header from '../../../components/header/Header'
 import htmlCssVec from '../../../assets/images/htmlcss.svg'
 import phpVec from '../../../assets/images/php.svg'
 import javaVec from '../../../assets/images/java.svg'
+import { Link } from 'react-router-dom'
 
 
 const AssignmentsTopics = () => {
@@ -15,7 +16,9 @@ const AssignmentsTopics = () => {
 
         <div className = "assignmentsTopicsContainer">
             <div className = "htmlCssContainer">
-                <img className='htmlvec' src={htmlCssVec} alt='html css logo vector' />
+                <Link to={"/assignments/html"}>
+                    <img className='htmlvec' src={htmlCssVec} alt='html css logo vector' />
+                </Link>
                 <div className = "htmlCssAssignments">
                     <h4 className = "htmlCss">HTML/CSS</h4>
                     <p className = "assignmentsNumber">placeholder</p>
@@ -28,14 +31,18 @@ const AssignmentsTopics = () => {
                 <p>Use these PHP assignments to practice and expand your PHP knowledge!</p>
             </div>
             <div className = "phpContainer">
-                <img className='phpvec' src={phpVec} alt='php logo vector' />
+                <Link to={"/assignments/php"}>
+                    <img className='phpvec' src={phpVec} alt='php logo vector' />
+                </Link>
                 <div className = "phpAssignments">
                     <h4 className = "php">PHP</h4>
                     <p className = "assignmentsNumber">placeholder</p>
                 </div>   
             </div>
             <div className = "javaContainer">
-                <img className='javavec' src={javaVec} alt='java logo vector' />
+                <Link to={"assignments/java"}>
+                    <img className='javavec' src={javaVec} alt='java logo vector' />
+                </Link>
                 <div className = "javaAssignments">
                     <h4 className = "java">JAVA</h4>
                     <p className = "assignmentsNumber">placeholder</p>

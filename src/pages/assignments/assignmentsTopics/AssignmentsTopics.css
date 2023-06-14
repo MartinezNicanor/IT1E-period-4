@@ -10,6 +10,7 @@
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(6,1fr);
+    margin-top: 20vh;
 
 }
 
