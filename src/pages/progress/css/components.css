@@ -1,0 +1,32 @@
+.subHeader{
+    margin: 5vh 0 5vh 0;
+    color: #3E76D5;
+}
+
+.containerStyles{
+    height: 30px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    border: 3px solid #3E76D5;
+}
+
+.fillerStyles{
+    height: 100%;
+    background-color: #3E76D5;
+    border-radius: 6px;
+    text-align: right;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.labelStyles{
+    padding: 5px;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.progressLabel{
+    margin-top: 5.3vh;
+    color: #3E76D5;
+}
