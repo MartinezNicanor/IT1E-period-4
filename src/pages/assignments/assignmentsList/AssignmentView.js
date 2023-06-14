@@ -35,9 +35,9 @@ const AssignmentView = () => {
 
   return (
     <div>
-        <Header />
+        <Header title = "Assignments"/>
         <div className='descHeader'>
-            <h1 className='assignmentsProvided'>Assignments provided by faculty</h1>
+            <h2 className='assignmentsProvided'>Assignments provided by faculty</h2>
             <p className='selectAssignment'>Select an assignment and start practicing your coding skills now!</p>
         </div>
         <div className='assignmentListContainer'>

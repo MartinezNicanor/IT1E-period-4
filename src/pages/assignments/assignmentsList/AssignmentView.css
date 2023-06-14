@@ -21,6 +21,6 @@ a{
 }
 
 a :hover{
-    font-weight: bold;
+    border: #3E76D5 2px solid;
 }
 
