@@ -6,6 +6,7 @@ import Home from './pages/home/Home';
 import Profile from './pages/profile/Profile';
 import SideBar from "./components/navbar/SideBar";
 import ForumOverview from './pages/forum/ForumOverview';
+import SetOverview from "./pages/lookThroughSets/SetOverview";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
                 <Route path={"/"} element={<Home />} />
                 <Route path={"/profile"} element={<Profile />} />
                 <Route path="/forum" element={<ForumOverview />} />
+                <Route path="/setOverview" element={<SetOverview />} />
             </Routes>
         </div>
     </Router>
