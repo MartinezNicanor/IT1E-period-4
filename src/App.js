@@ -6,6 +6,7 @@ import Home from './pages/home/Home';
 import Profile from './pages/profile/Profile';
 import SideBar from "./components/navbar/SideBar";
 import ForumOverview from './pages/forum/ForumOverview';
+import NewSet from "./pages/flashcards/NewSet";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
                 <Route path={"/"} element={<Home />} />
                 <Route path={"/profile"} element={<Profile />} />
                 <Route path="/forum" element={<ForumOverview />} />
+                <Route path="/flashcards/new-set" element={<NewSet />} />
             </Routes>
         </div>
     </Router>
