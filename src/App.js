@@ -6,7 +6,7 @@ import Home from './pages/home/Home';
 import Profile from './pages/profile/Profile';
 import SideBar from "./components/navbar/SideBar";
 import ForumOverview from './pages/forum/ForumOverview';
-import SetOverview from "./pages/lookThroughSets/SetOverview";
+import Sample from "./pages/lookThroughSets/Sample";
 
 function App() {
   return (
@@ -21,7 +21,7 @@ function App() {
                 <Route path={"/"} element={<Home />} />
                 <Route path={"/profile"} element={<Profile />} />
                 <Route path="/forum" element={<ForumOverview />} />
-                <Route path="/setOverview" element={<SetOverview />} />
+                <Route path="/setOverview" element={<Sample />} />
             </Routes>
         </div>
     </Router>
