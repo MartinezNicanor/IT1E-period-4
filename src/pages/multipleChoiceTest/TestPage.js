@@ -9,12 +9,11 @@ function TestPage() {
         <div className="test-container">
             <Header title={"Practice test"} />
             <SubHeader label={"Test 1"} />
-            <div className={"questionContainer"}>
+            <div className="questionContainer">
                 <Question question={"What is the capital of the Netherlands?"} />
-                <Question question={"What is the capital of the Netherlands?"} />
-                <Question question={"What is the capital of the Netherlands?"} />
-                <Question question={"What is the capital of the Netherlands?"} />
-                <Question question={"What is the capital of the Netherlands?"} />
+            </div>
+            <div className="buttonContainer">
+                <button className="submitTestButton"><strong>Submit</strong></button>
             </div>
         </div>
     )
