@@ -1,7 +1,7 @@
 import React from 'react'
 import * as AiIcons from 'react-icons/ai';
 import "./logout.css";
-import {Link} from "react-router-dom";
+import { useLogout } from '../hooks/useLogout';
 
 
 const linkStyle = {
@@ -11,10 +11,16 @@ const linkStyle = {
   };
 
 function Logout() {
+    const { logout } = useLogout()
+
+    const handleClick = () => {
+        logout()
+    }
+
   return (
     <>
         <div className = "logOutBtn">
-            <button className='btnForLogout'><AiIcons.AiOutlinePoweroff/> <Link to="/login" style={linkStyle}>Log out</Link></button>
+            <button className='btnForLogout' onClick={handleClick}><AiIcons.AiOutlinePoweroff/> Log out</button>
         </div> 
     </>
   )
