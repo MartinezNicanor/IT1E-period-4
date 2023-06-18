@@ -1,3 +1,8 @@
+.askForumContainer {
+    grid-column: 3/13;
+    padding: 0 7vw;
+}
+
 .askForumContainer form {
     padding: 5vh 6vw;
     display: flex;
@@ -38,10 +43,12 @@
 
 .inputContainer input::placeholder {
     color: #3E76D5;
+    font-size: 0.7vw;
 }
 
 .inputContainer textarea::placeholder {
     color: #3E76D5;
+    font-size: 0.7vw;
 }
 
 .radioButtons {
@@ -61,4 +68,5 @@
     align-self: end;
     padding: 1vh 1.5vw;
     border-radius: 10px;
+    border: 0;
 }
