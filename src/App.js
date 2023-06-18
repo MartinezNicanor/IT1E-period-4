@@ -7,6 +7,7 @@ import Footer from './components/footer/Footer';
 import Profile from './pages/profile/Profile';
 import SideBar from "./components/navbar/SideBar";
 import ForumOverview from './pages/forum/ForumOverview';
+import MaybeFooter from "./components/footer/MaybeFooter";
 
 function App() {
 
@@ -23,6 +24,9 @@ function App() {
                 <Route path={"/profile"} element={<Profile />} />
                 <Route path="/forum" element={<ForumOverview />} />
             </Routes>
+            <MaybeFooter>
+                <Footer />
+            </MaybeFooter>
         </div>
     </Router>
   );

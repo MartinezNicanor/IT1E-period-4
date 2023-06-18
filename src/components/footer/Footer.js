@@ -9,12 +9,12 @@ const Footer = () => {
     ];
 
     const helpList = [
-        {title: "Ask the forum", src: "#"},
+        {title: "Ask the forum", src: "/forum"},
         {title: "Something", src: "#"},
     ];
 
     const aboutList = [
-        {title: "About quized", src: "#"},
+        {title: "About QUIZZED", src: "#"},
         {title: "Our team", src: "#"},
     ];
 

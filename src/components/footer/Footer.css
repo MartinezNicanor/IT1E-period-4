@@ -32,3 +32,7 @@ footer {
     display: flex;
     gap: 60px;
 }
+
+.maybeFooter {
+    grid-column: 1/13;
+}

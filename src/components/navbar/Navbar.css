@@ -2,7 +2,8 @@ nav{
     font-family: "Montserrat";
     height: 100vh;
     padding: 1vh 0.5vw;
-    position: fixed;
+    position: sticky;
+    top: 0;
     border-right: 3px solid #3E76D5;
 }
 
