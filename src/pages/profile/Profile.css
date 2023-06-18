@@ -1,3 +1,8 @@
+.profileContainer {
+    grid-column: 3/13;
+    padding: 0 7vw;
+}
+
 .nameTitle {
     font-size: 2.2em;
     font-weight: bold;
@@ -63,7 +68,7 @@
     justify-content: space-between;
 }
 
-.saveButton {
+.profileButton {
     color: #3E76D5;
     background-color: white;
     border: #3E76D5;
