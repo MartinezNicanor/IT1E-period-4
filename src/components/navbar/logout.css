@@ -4,7 +4,7 @@
     align-items: center;
 }
 
-.btnForLogout{
+.logOutBtn button{
     border: none;
     background-color: white;
     font-family: Montserrat;
