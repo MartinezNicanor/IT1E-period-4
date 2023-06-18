@@ -35,7 +35,7 @@ const Question = () => {
             <Header title={question.title} />
             <div className="questionContainer">
                 <div className="question">
-                    <div className="description">
+                    <div className="questionDescription">
                         <p>{ question.description }</p>
                         <p><strong className="authorStrong">{ question.author } -</strong> asked { question.date }</p>
                     </div>
