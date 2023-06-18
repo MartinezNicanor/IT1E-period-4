@@ -44,7 +44,7 @@ const Login = () => {
                 </div>
                 <Link to="/register" className="registerLink">New user? <strong>Sign Up</strong></Link>
                 <button className="loginButton" disabled={ isLoading }><strong>Log in</strong></button>
-                {error && <div>{ error }</div>}
+                {error && <div className="authError">{ error }</div>}
             </form>
         </div>
     );

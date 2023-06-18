@@ -51,3 +51,14 @@
 .registerLink strong:hover {
     text-decoration: underline;
 }
+
+.authError {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    background: #ffefef;
+    border: 1px solid #e7195a;
+    color: #e7195a;
+    border-radius: 8px;
+    margin: 2vh 0 0 0;
+}
