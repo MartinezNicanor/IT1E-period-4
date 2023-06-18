@@ -31,7 +31,7 @@ const Question = () => {
     ]
 
     return (
-        <div>
+        <div className="questionGrid">
             <Header title={question.title} />
             <div className="questionContainer">
                 <div className="question">

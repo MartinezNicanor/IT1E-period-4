@@ -1,3 +1,8 @@
+.questionGrid {
+    grid-column: 3/13;
+    padding: 0 7vw;
+}
+
 .questionContainer {
     padding: 4vh 6vw;
 }
@@ -30,7 +35,7 @@ hr {
 
 .answerForm textarea::placeholder {
     color: #3E76D5;
-    font-size: 1rem;
+    font-size: 0.7vw;
 }
 
 .answerForm button {
