@@ -1,41 +1,46 @@
-.openedAssignmentContainer{
+.mainAssignmentContainer {
+    grid-column: 3/13;
+}
+
+.openedAssignmentContainer {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     gap: 2vh;
+    padding: 0vh 3vw;
 }
 
-.prevAndNextBtn{
+.prevAndNextBtn {
     display: flex;
     justify-content: space-between;
     grid-column: 1/13;
 }
 
-.prevContainer{
+.prevContainer {
     display: flex;
     align-items: center;
     flex-wrap: nowrap;
     gap: 1vw;
 }
 
-.nextContainer{
+.nextContainer {
     display: flex;
     align-items: center;
     flex-wrap: nowrap;
     gap: 1vw;
 }
 
-.assignmentTextBox{
+.assignmentTextBox {
     grid-column: 1/11;
 }
 
-.assignmentTitle{
+.assignmentTitle {
     color: #3E76D5;
 }
 
-.assignmentText > p{
+.assignmentText>p {
     text-align: justify;
 }
 
-.timerContainer{
+.timerContainer {
     grid-column: 12/13;
 }

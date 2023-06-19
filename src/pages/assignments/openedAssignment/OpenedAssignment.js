@@ -13,32 +13,32 @@ const OpenedAssignment = () => {
             id: 1
         }
     ]
-    
-  return (
-    <div>
-        <Header/>
-        <div className = "openedAssignmentContainer">
-            <div className = "prevAndNextBtn">
-                <div className = "prevContainer">
-                    <AiIcons.AiOutlineArrowLeft/> <h3 className = "prev">Previous Assignment</h3>   
+
+    return (
+        <div className="mainAssignmentContainer">
+            <Header title={"Assignments"} />
+            <div className="openedAssignmentContainer">
+                <div className="prevAndNextBtn">
+                    <div className="prevContainer">
+                        <AiIcons.AiOutlineArrowLeft /> <h3 className="prev">Previous Assignment</h3>
+                    </div>
+                    <div className="nextContainer">
+                        <h3 className="next">Next Assignment</h3> <AiIcons.AiOutlineArrowRight />
+                    </div>
                 </div>
-                <div className = "nextContainer">
-                    <h3 className = "next">Next Assignment</h3> <AiIcons.AiOutlineArrowRight/>
+                <div className="assignmentTextBox">
+                    <h2 className="assignmentTitle">{assignments[0].title}</h2>
+                    <div className="assignmentText">
+                        <p>{assignments[0].text}</p>
+                        <p>You are expected to finish this assignment in <b>1:30 hours.</b> Good luck and happy coding!</p>
+                    </div>
                 </div>
-            </div>
-            <div className = "assignmentTextBox">
-                <h2 className = "assignmentTitle">{assignments[0].title}</h2>
-                <div className = "assignmentText">
-                    <p>{assignments[0].text}</p>
-                    <p>You are expected to finish this assignment in <b>1:30 hours.</b> Good luck and happy coding!</p>
+                <div className="timerContainer">
+                    <Timer />
                 </div>
-            </div>
-            <div className = "timerContainer">
-                <Timer />
             </div>
         </div>
-    </div>
-  )
+    )
 }
 
 export default OpenedAssignment

@@ -1,11 +1,11 @@
 import './Header.css';
 
 const Header = ({ title }) => {
-    return ( 
+    return (
         <header>
-            <p className="headerTitle">{ 'Assignments' }</p>
+            <p className="headerTitle">{title}</p>
         </header>
-     );
+    );
 }
 
 
