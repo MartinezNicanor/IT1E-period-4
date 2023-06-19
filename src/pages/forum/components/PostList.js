@@ -1,8 +1,6 @@
 import { Link } from "react-router-dom";
 
 const PostList = ({ posts }) => {
-    
-
     return (
         <div className="postsList">
             {posts.map(post => (
