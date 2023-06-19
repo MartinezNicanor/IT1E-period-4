@@ -14,7 +14,7 @@ function Logout() {
   return (
     <>
         <div className = "logOutBtn">
-            <button className='btnForLogout'><AiIcons.AiOutlinePoweroff/> <Link to="/signin" style={linkStyle}>Log out</Link></button>
+            <button className='btnForLogout'><AiIcons.AiOutlinePoweroff/> <Link to="/login" style={linkStyle}>Log out</Link></button>
         </div> 
     </>
   )
