@@ -15,7 +15,7 @@ const FormProfile = ({ info }) => {
                     <input type="text" name= { info.className[1] } placeholder={ info.inputs[1] } />
                 </div>
             </div>
-            <button>Save</button>
+            <button className="profileButton">Save</button>
         </form>
     );
 }

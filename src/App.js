@@ -1,31 +1,34 @@
-import './App.css';
+import Login from "./pages/login/Login";
+import Register from './pages/register/Register.js';
+import MaybeNavBar from './components/maybeNavBar/MaybeNavBar.js';
+import { BrowserRouter as Router, Route, Routes, Navigate} from "react-router-dom";
 import Home from './pages/home/Home';
-import SideBar from "./components/navbar/SideBar";
 import Profile from './pages/profile/Profile';
+import SideBar from "./components/navbar/SideBar";
 import ForumOverview from './pages/forum/ForumOverview';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import AssignmentView from './pages/assignments/assignmentsList/AssignmentView';
+import { useAuthContext } from "./components/hooks/useAuthContext";
 
 function App() {
-    return (
-        <Router>
-            <div className="gridContainer">
-                <div className="nav">
-                  <SideBar /> 
-                </div>
-                <div className="mainContent">
-                <Routes>
-                    {/* If you want to add your page add it as the Route below and add the name of the page
-                    like this path="/example", also change the element to the component you want to show */}
-                    <Route path="/" element={<Home />} />
-                    <Route path="/profile" element={<Profile />} />
-                    <Route path="/assignments/html" element={<AssignmentView />} />
-                    <Route path="/forum" element={<ForumOverview />} />
-                </Routes>
-                </div>
-            </div>
-        </Router>
-    );
+    const { user } = useAuthContext()
+
+  return (
+    <Router>
+        <div className="gridContainer">
+            <MaybeNavBar>
+                <SideBar />
+            </MaybeNavBar>
+            <Routes>
+                <Route path={"/register"} element={!user ? <Register /> : <Navigate to="/" />} />
+                <Route path={"/login"} element={!user ? <Login /> :<Navigate to="/" />} />
+                <Route path={"/"} element={user ? <Home /> : <Navigate to="/login" />} />
+                <Route path={"/profile"} element={user ? <Profile /> : <Navigate to="/login" />} />
+                <Route path="/forum" element={user ? <ForumOverview /> : <Navigate to="/login" />} />
+                <Route path="/assignments/html" element={<AssignmentView />} />
+            </Routes>
+        </div>
+    </Router>
+  );
 }
 
 export default App;
