@@ -1,10 +1,12 @@
 nav{
-    
-    width: inherit;
-    font-family: Montserrat;
+    font-family: "Montserrat";
     height: 100vh;
-    padding: 1vh;
+    padding: 1vh 0.5vw;
     position: fixed;
-    margin-left: 0.5vw;
+    border-right: 3px solid #3E76D5;
 }
 
+.maybeNav {
+
+    grid-column: 1/3;
+}
