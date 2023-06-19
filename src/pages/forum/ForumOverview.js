@@ -4,7 +4,7 @@ import "./ForumOverview.css";
 import PostList from "./components/PostList";
 
 const OVerview = () => {
-    {/* This array is only a placeholder */}
+    // This array is only a placeholder 
     const posts = [
         {
             title: "Test post 1",

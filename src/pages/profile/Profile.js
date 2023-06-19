@@ -21,7 +21,7 @@ const Profile = () => {
             <Header title = "Profile" />
             <div className="userInfo">
                 <div className="info">
-                    <p className="nameTitle">Random Name</p> {/* This is hardcoded for now */}
+                    <p className="nameTitle">Random Name</p>
                     <p className="emailTitle">random-name@email.com</p>
                 </div>
                 <Avatar src = "" alt = "" />
