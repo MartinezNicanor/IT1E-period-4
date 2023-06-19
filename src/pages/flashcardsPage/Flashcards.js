@@ -34,7 +34,7 @@ const Flashcards = () => {
         },
     ]
     return (
-        <div>
+        <div className="container">
             <Header title={"Flashcards"} />
             <div className="setContainer">
                 <div className = "setsBox">
