@@ -1,4 +1,20 @@
 body {
-  margin: 0;
-  font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.gridContainer {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    height: 100vh;
+}
+
+.mainContent {
+    grid-column: 3/13;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
 }
