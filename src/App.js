@@ -7,6 +7,7 @@ import Profile from './pages/profile/Profile';
 import SideBar from "./components/navbar/SideBar";
 import ForumOverview from './pages/forum/ForumOverview';
 import { useAuthContext } from "./components/hooks/useAuthContext";
+import EditSet from "./pages/flashcards/EditSet";
 
 function App() {
     const { user } = useAuthContext()
@@ -23,6 +24,7 @@ function App() {
                 <Route path={"/"} element={user ? <Home /> : <Navigate to="/login" />} />
                 <Route path={"/profile"} element={user ? <Profile /> : <Navigate to="/login" />} />
                 <Route path="/forum" element={user ? <ForumOverview /> : <Navigate to="/login" />} />
+                <Route path="/flashcards/edit-set" element={<EditSet />} />
             </Routes>
         </div>
     </Router>

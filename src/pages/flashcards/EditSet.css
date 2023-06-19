@@ -1,0 +1,66 @@
+.editSetContainer {
+    grid-column: 3/13;
+    padding: 0 7vw;
+}
+
+.titleContainer,
+.descriptionContainer {
+    background-color: #ECECEC;
+    border-radius: 2vh;
+    padding: 1.5vh;
+    margin: 5vh 0 2vh 0;
+}
+
+.descriptionContainer {
+    height: 15vh;
+    margin: 2vh 0 5vh 0;
+}
+
+.titleInput,
+.descriptionInput,
+.termInput,
+.definitionInput {
+    width: 66vw;
+    height: 4vh;
+    font-size: 1.2em;
+    color: #3E76D5;
+    border: none;
+    border-radius: 1vh;
+    padding-left: 0.6vw;
+    background-color: #ECECEC;
+}
+
+.termContainer {
+    background-color: #ECECEC;
+    border-radius: 2vh 2vh 0 0;
+    padding: 1.5vh;
+    margin: 3vh 0 1vh 0;
+}
+
+.definitionContainer {
+    background-color: #ECECEC;
+    border-radius: 0 0 2vh 2vh;
+    padding: 1.5vh;
+    height: 10vh;
+}
+
+.btnContainer {
+    display: flex;
+    justify-content: flex-end;
+    margin: 5vh 0;
+    align-items: center;
+    gap: 1vw;
+}
+
+.addBtn,
+.saveBtn {
+    height: 5vh;
+    background-color: #3E76D5;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 1.5vh;
+    font-weight: 600;
+    font-size: 1.3vw;
+    padding: 0.5vh 1vw;
+}
