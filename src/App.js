@@ -17,9 +17,8 @@ function App() {
                     {/* If you want to add your page add it as the Route below and add the name of the page
                     like this path="/example", also change the element to the component you want to show */}
                     <Route path="/" element={<Home />} />
-                    <Route path="/" element={<Home />} />
                     <Route path="/profile" element={<Profile />} />
-                    <Route path="/tests" element={<GenerateTestPage />} />
+                    <Route path="/generateTest" element={<GenerateTestPage />} />
                 </Routes>
                 </div>
             </div>
