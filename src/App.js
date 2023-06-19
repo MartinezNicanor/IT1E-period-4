@@ -6,29 +6,29 @@ import Home from './pages/home/Home';
 import Profile from './pages/profile/Profile';
 import SideBar from "./components/navbar/SideBar";
 import ForumOverview from './pages/forum/ForumOverview';
-import ProgressPage from './pages/progress/ProgressPage';
 import { useAuthContext } from "./components/hooks/useAuthContext";
+import ProgressPage from "./pages/progress/ProgressPage";
 
 function App() {
     const { user } = useAuthContext()
 
-  return (
-    <Router>
-        <div className="gridContainer">
-            <MaybeNavBar>
-                <SideBar />
-            </MaybeNavBar>
-            <Routes>
-                <Route path={"/register"} element={<Register />} />
-                <Route path={"/login"} element={<Login />} />
-                <Route path={"/"} element={<Home />} />
-                <Route path={"/profile"} element={<Profile />} />
-                <Route path={"/forum"} element={<ForumOverview />} />
-                <Route path={"/progress"} element={<ProgressPage />} />
-            </Routes>
-        </div>
-    </Router>
-  );
+    return (
+        <Router>
+            <div className="gridContainer">
+                <MaybeNavBar>
+                    <SideBar />
+                </MaybeNavBar>
+                <Routes>
+                    <Route path={"/register"} element={!user ? <Register /> : <Navigate to="/" />} />
+                    <Route path={"/login"} element={!user ? <Login /> :<Navigate to="/" />} />
+                    <Route path={"/"} element={user ? <Home /> : <Navigate to="/login" />} />
+                    <Route path={"/profile"} element={user ? <Profile /> : <Navigate to="/login" />} />
+                    <Route path={"/forum"} element={user ? <ForumOverview /> : <Navigate to="/login" />} />
+                    <Route path={"/progress"} element={user ? <ProgressPage /> : <Navigate to="/login" />} />
+                </Routes>
+            </div>
+        </Router>
+    );
 }
 
 export default App;

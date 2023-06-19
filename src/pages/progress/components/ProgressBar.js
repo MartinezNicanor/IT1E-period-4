@@ -1,12 +1,9 @@
 import React from 'react';
 import './../css/components.css'
 
-const ProgressBar = ({label}) => {
+const ProgressBar = ({label, completed, total}) => {
 
-    const completed = 2;
-    const total = 5;
-
-    const percentage = completed / total * 100;
+    const percentage = Math.floor((completed / total) * 100);
 
     const progressWidth = {
         width: `${percentage}%`
