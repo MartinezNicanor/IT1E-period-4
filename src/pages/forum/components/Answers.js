@@ -4,11 +4,11 @@ const Answers = ({ answers }) => {
         {answers.map(answer => (
             <div className="question">
                 <div className="description">
-                    <p>{ answer.description }</p>
+                    <p className="descriptoinsForum">{ answer.description }</p>
                     <p><strong className="authorStrong">{ answer.author } -</strong> asked { answer.date }</p>
                 </div>
                 <div className="votes">
-                    <p>{ answer.votes } votes</p>
+                    <p className="votesText">{ answer.votes } votes</p>
                     <div className="voteButtons">
                         <span className="material-symbols-outlined">thumb_up</span>
                         <span className="material-symbols-outlined">thumb_down</span>

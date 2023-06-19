@@ -73,3 +73,12 @@ hr {
     flex-direction: column;
     gap: 3vh;
 }
+
+.votesText {
+    display: flex;
+    white-space: nowrap;
+}
+
+.descriptoinsForum {
+    width: 90%;
+}

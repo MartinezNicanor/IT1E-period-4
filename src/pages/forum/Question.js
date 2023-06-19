@@ -36,7 +36,7 @@ const Question = () => {
             <div className="questionContainer">
                 <div className="question">
                     <div className="questionDescription">
-                        <p>{ question.description }</p>
+                        <p className="descriptoinsForum">{ question.description }</p>
                         <p><strong className="authorStrong">{ question.author } -</strong> asked { question.date }</p>
                     </div>
                     <div className="votes">
