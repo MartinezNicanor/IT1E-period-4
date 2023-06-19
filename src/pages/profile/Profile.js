@@ -3,32 +3,71 @@ import Avatar from './components/Avatar';
 import Header from '../../components/header/Header';
 import { useEffect, useState } from 'react';
 import { useAuthContext } from '../../components/hooks/useAuthContext';
+import { useLogout } from '../../components/hooks/useLogout';
 
 const Profile = () => {
     const [fname, setFname] = useState('')
     const [lname, setLname] = useState('')
     const [email, setEmail] = useState('')
+
     const { user } = useAuthContext()
-    
+    const { logout } = useLogout()
+    const [passError, setPassError] = useState(null)
+    const [nameError, setNameError] = useState(null)
+
+    const [currentPassword, setCurrentPass] = useState('')
+    const [newPassword, setNewPass] = useState('')
+
+    // fetch user details
     useEffect(() => {
         const fetchUserDetails = async () => {
-          const response = await fetch('https://projectinnovate-it1e-backend-production.up.railway.app/profile', {
+            const response = await fetch('https://projectinnovate-it1e-backend-production.up.railway.app/profile', {
             method: 'GET',
             headers: {'Authorization': `Bearer ${user.token}`},
-          })
-          const json = await response.json()
+        })
+        const json = await response.json()
     
-          if (response.ok) {
+        if (response.ok) {
             setFname(json.firstName)
             setLname(json.lastName)
             setEmail(json.email)
-          }
         }
+    }
     
-        if (user) {
-          fetchUserDetails()
+    if (user) {
+        fetchUserDetails()
+    }
+    }, [user])
+
+    // handle password change
+    const handlePassChange = async(e) => {
+        e.preventDefault()
+
+        const response = await fetch('https://projectinnovate-it1e-backend-production.up.railway.app/profile', {
+            method: 'PATCH',
+            headers: {'Content-Type': 'application/json; charset=UTF-8', 'Authorization': `Bearer ${user.token}`},
+            body: JSON.stringify({ currentPassword, newPassword })
+        })
+        const json = await response.json()
+
+        if (!response.ok) {
+            setPassError(json.message)
+            setCurrentPass('')
+            setNewPass('')
         }
-      }, [user])
+
+        if (response.ok) {
+            alert(json.message + ", please log with you new password!")
+            logout()
+        }
+    }
+
+    // handle name change
+    const handleNameChange = (e) => {
+        e.preventDefault()
+
+        setNameError("This doesn't work, sorry 😭")
+    }
 
     return ( 
         <div className="profileContainer">
@@ -41,7 +80,7 @@ const Profile = () => {
                 <Avatar src = "" alt = "" />
             </div>
             <div className="forms">
-                <form>
+                <form onSubmit={handleNameChange}>    
                 <p className="inputTitle">Change your name</p>
                 <div className="inputContainer">
                     <div className="inputs">
@@ -56,24 +95,37 @@ const Profile = () => {
                         <input type="text" name="lname" placeholder="Last Name" />
                     </div>
                 </div>
+                {nameError && <div className="authError">{ nameError }</div>}
                 <button className="profileButton">Save</button>
             </form>
 
-            <form>
+            <form onSubmit={handlePassChange}>
                 <p className="inputTitle">Change you password</p>
                 <div className="inputContainer">
                     <div className="inputs">
                         <label>Current password:</label>
-                        <input type="password" name="currentPassword" placeholder="Current password" />
+                        <input
+                        type="password"
+                        onChange={(e) => setCurrentPass(e.target.value)}
+                        value={currentPassword}
+                        name="currentPassword"
+                        placeholder="Current password"
+                        />
                     </div>
                 </div>
 
                 <div className="inputContainer">
                     <div className="inputs">
                         <label>New password:</label>
-                        <input type="password" name="newPassword" placeholder="New password" />
+                        <input
+                        type="password"
+                        onChange={(e) => setNewPass(e.target.value)}
+                        value={newPassword}
+                        name="newPassword"
+                        placeholder="New password" />
                     </div>
                 </div>
+                {passError && <div className="authError">{ passError }</div>}
                 <button className="profileButton">Save</button>
             </form>
             </div>
