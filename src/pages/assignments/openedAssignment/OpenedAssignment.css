@@ -1,12 +1,12 @@
 .mainAssignmentContainer {
     grid-column: 3/13;
+    padding: 0 7vw;
 }
 
 .openedAssignmentContainer {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     gap: 2vh;
-    padding: 0vh 3vw;
 }
 
 .prevAndNextBtn {
