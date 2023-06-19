@@ -1,9 +1,9 @@
-.descHeader{
-    margin-bottom: 8vh;
+.descHeader {
+    margin: 6vh 0 4vh 0;
 }
 
 
-.assignmentBox{
+.assignmentBox {
     display: flex;
     justify-content: space-between;
     background-color: #ECECEC;
@@ -11,16 +11,21 @@
     border-radius: 1.2vh;
     padding: 0vh 1vw;
     align-items: center;
-    
+    height: 6vh;
+
 }
 
-a{
+.assignmentListContainer {
+    grid-column: 3/13;
+    padding: 0 7vw;
+}
+
+.assignmentBox a {
     text-decoration: none;
     color: #3E76D5;
-    
+
 }
 
-a :hover{
-    border: #3E76D5 2px solid;
+.assignmentBox:hover {
+    outline: #3E76D5 2px solid;
 }
-
