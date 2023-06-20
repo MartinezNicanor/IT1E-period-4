@@ -2,14 +2,14 @@ nav {
     font-family: "Montserrat";
     height: 99vh;
     padding: 1vh 0.5vw;
-    position: fixed;
+    position: sticky;
+    top: 0;
     border-right: 3px solid #3E76D5;
     display: flex;
     flex-direction: column;
 }
 
 .maybeNav {
-
     grid-column: 1/3;
 }
 
