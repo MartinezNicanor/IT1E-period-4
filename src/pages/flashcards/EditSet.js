@@ -13,7 +13,7 @@ const FlashcardSet = () => {
 
     const [title, setTitle] = useState('');
     const [description, setDescription] = useState('');
-    const [saveSets, setSavedSets] = useState([]);
+    const [savedSets, setSavedSets] = useState([]);
 
     const addCard = () => {
         const newCard = { term: '', definition: '', id: flashcards.length + 1 };
@@ -28,7 +28,7 @@ const FlashcardSet = () => {
 
     const saveSet = () => {
         const newSet = { title, flashcards };
-        setSavedSets([...saveSets, newSet]);
+        setSavedSets([...savedSets, newSet]);
         setTitle('');
         setDescription('');
         setFlashcards([
@@ -38,6 +38,12 @@ const FlashcardSet = () => {
             { term: '', definition: '', id: 4 },
             { term: '', definition: '', id: 5 }
         ]);
+    };
+
+    const updateFlashcardSet = (index, field, value) => {
+        const updatedSet = [...savedSets];
+        updatedSet[index][field] = value;
+        setSavedSets(updatedSet);
     };
 
     return (
@@ -53,9 +59,8 @@ const FlashcardSet = () => {
                 />
             </div>
             <div className="descriptionContainer">
-                <input
+                <textarea
                     className='descriptionInput'
-                    type="textarea"
                     placeholder="Enter a description"
                     value={description}
                     onChange={(e) => setDescription(e.target.value)}
@@ -75,9 +80,8 @@ const FlashcardSet = () => {
                             />
                         </div>
                         <div className="definitionContainer">
-                            <input
+                            <textarea
                                 className='definitionInput'
-                                type="text"
                                 placeholder="Definition"
                                 value={card.definition}
                                 onChange={(e) => updateCard(index, 'definition', e.target.value)}
@@ -87,7 +91,36 @@ const FlashcardSet = () => {
                 ))
             }
             <div className="btnContainer">
+                <button className='addBtn' onClick={addCard}>Add Card</button>
                 <button className='saveBtn' onClick={saveSet}>Save Set</button>
+            </div>
+
+            <div>
+                {savedSets.map((set, index) => (
+                    <div key={index}>
+                        <input
+                            type="text"
+                            placeholder="Set Title"
+                            value={set.title}
+                            onChange={(e) => updateFlashcardSet(index, 'title', e.target.value)}
+                        />
+                        {set.flashcards.map((card, cardIndex) => (
+                            <div key={cardIndex}>
+                                <input
+                                    type="text"
+                                    placeholder="Term"
+                                    value={card.term}
+                                    onChange={(e) => updateFlashcardSet(index, `flashcards[${cardIndex}].term`, e.target.value)}
+                                />
+                                <textarea
+                                    placeholder="Definition"
+                                    value={card.definition}
+                                    onChange={(e) => updateFlashcardSet(index, `flashcards[${cardIndex}].definition`, e.target.value)}
+                                />
+                            </div>
+                        ))}
+                    </div>
+                ))}
             </div>
         </div>
     );
