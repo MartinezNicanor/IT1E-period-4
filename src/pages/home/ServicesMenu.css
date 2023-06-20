@@ -1,0 +1,84 @@
+.mainContentContainer{
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    margin: 0vh 3vh 3vh 6vh;
+    
+}
+
+.menuText{
+    grid-column: 1/5;
+}
+
+.servicesContainer {
+    grid-column: 6/13;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 10vh;
+    
+}
+
+.servicesContainer > div > p{
+    font-size: 1.15em;
+    
+}
+
+p{
+    font-size: 1.2em;
+}
+h1{
+    font-size: 1.8em;
+}
+
+h3{
+    font-size: 1.3em;
+}
+
+.ourServices{
+    font-size: 1.6em;
+    color: #3E76D5;
+}
+
+.testGenContainer{
+    height: 25vh;
+    width: 35vh;
+    background-image: url(../../assets/images/tests.jpg);
+    background-size: cover;
+    padding: 0vh 1vh 0vh 1.5vh;
+    color: white;
+    border-radius: 2vh;
+    margin-bottom: 3vh;
+    margin-right: 2vh;
+}
+
+.assignmentsContainer{
+    height: 25vh;
+    width: 35vh;
+    background-image: url(../../assets/images/assignments.jpg);
+    background-size: cover;
+    padding: 0vh 1vh 0vh 1.5vh;
+    color: white;
+    border-radius: 2vh;
+    margin-bottom: 3vh;
+}
+
+.flashCardsContainer{
+    height: 25vh;
+    width: 35vh;
+    background-image: url(../../assets/images/flashcards.jpg);
+    background-size: cover;
+    padding: 0vh 1vh 0vh 1.5vh;
+    color: white;
+    border-radius: 2vh;
+    margin-right: 2vh;
+}
+
+.progressContainer{
+    height: 25vh;
+    width: 35vh;
+    background-image: url(../../assets/images/progress.jpg);
+    background-size: cover;
+    padding: 0vh 1vh 0vh 1.5vh;
+    color: white;
+    border-radius: 2vh;
+}
