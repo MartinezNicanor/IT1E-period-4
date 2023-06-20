@@ -9,7 +9,7 @@ function UsersName() {
         <>
             <div className="usersName">
                 {/* will insert users name dynamically, using placeholder for now*/}
-                <BsIcons.BsFillPersonFill /> <Link to="/profile">Random User</Link>
+                <BsIcons.BsFillPersonFill /> <Link to="/profile" className='profileLink'>Random User</Link>
             </div>
         </>
     )
