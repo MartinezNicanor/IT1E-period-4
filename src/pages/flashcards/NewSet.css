@@ -21,13 +21,22 @@
 .termInput,
 .definitionInput {
     width: 66vw;
-    height: 4vh;
     font-size: 1.2em;
     color: #3E76D5;
     border: none;
     border-radius: 1vh;
     padding-left: 0.6vw;
     background-color: #ECECEC;
+    resize: none;
+}
+
+.descriptionInput {
+    height: 14vh;
+}
+
+
+.definitionInput {
+    height: 9vh;
 }
 
 .termContainer {

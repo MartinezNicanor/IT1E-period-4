@@ -54,9 +54,8 @@ const FlashcardSet = () => {
                 />
             </div>
             <div className='descriptionContainer'>
-                <input
+                <textarea
                     className='descriptionInput'
-                    type="textarea"
                     placeholder="Enter a description"
                     value={description}
                     onChange={(e) => setDescription(e.target.value)}
@@ -76,9 +75,8 @@ const FlashcardSet = () => {
                             />
                         </div>
                         <div className='definitionContainer'>
-                            <input
+                            <textarea
                                 className='definitionInput'
-                                type="text"
                                 placeholder="Definition"
                                 value={card.definition}
                                 onChange={(e) => updateCard(index, 'definition', e.target.value)}
