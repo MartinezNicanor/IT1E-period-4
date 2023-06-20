@@ -20,7 +20,7 @@ const AskForum = () => {
     return (
         <div className="askForumContainer">
             <Header title="Ask a question" />
-            <form onSubmit={handleSubmit}>
+            <form className="askForm" onSubmit={handleSubmit}>
                 <div className="inputContainer">
                     <h2>Question title</h2>
                     <p>Be specific and clear. Summarize the problem!</p>
