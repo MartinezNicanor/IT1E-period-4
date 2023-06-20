@@ -6,6 +6,7 @@ import * as MdIcons from 'react-icons/md';
 export const SideBarData = [
     {
         title: "Assignments",
+        path: "/assignments",
         icon: <BsIcons.BsJournalCode />,
         iconClosed: <BsIcons.BsArrowDownShort />,
         iconOpened: <BsIcons.BsArrowUpShort />,
