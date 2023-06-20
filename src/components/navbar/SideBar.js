@@ -12,16 +12,21 @@ import "./Navbar.css";
 
 const SideBar = () => {
     return (
-            <nav>
-                <div className="logoContainer">
-                    <Logo />
+        <nav>
+            <div className="logoContainer">
+                <Logo />
+            </div>
+            <UsersName />
+            <div className='sideBarLinks'>
+                <div className='pageLinks'>
+                    {SideBarData.map((item, index) => {
+                        return <SubMenu item={item} key={index} />
+                    })}
                 </div>
-                <UsersName />
-                {SideBarData.map((item, index) => {
-                    return <SubMenu item={item} key={index} />
-                })}
                 <Logout />
-            </nav>
+            </div>
+
+        </nav>
     );
 }
 

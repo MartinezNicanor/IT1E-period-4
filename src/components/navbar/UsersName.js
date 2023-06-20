@@ -8,6 +8,7 @@ import jwt_decode from "jwt-decode";
 
 function UsersName() {
     const { user } = useAuthContext()
+    
     if (user) {
         const token = jwt_decode(user.token)
 
@@ -15,12 +16,10 @@ function UsersName() {
         const lastName = token.lastName.charAt(0).toUpperCase() + token.lastName.slice(1)
 
         return (
-            <>
                 <div className="usersName">
                     {/* will insert users name dynamically, using placeholder for now*/}
-                    <BsIcons.BsFillPersonFill /> <Link to="/profile">{ firstName }. { lastName }</Link>
+                    <BsIcons.BsFillPersonFill /> <Link to="/profile" className='profileLink'>{ firstName }. { lastName }</Link>
                 </div>
-            </>
         )
     }
 }

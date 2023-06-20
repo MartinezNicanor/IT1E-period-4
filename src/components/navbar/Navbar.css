@@ -1,13 +1,21 @@
-nav{
+nav {
     font-family: "Montserrat";
-    height: 100vh;
+    height: 99vh;
     padding: 1vh 0.5vw;
     position: sticky;
     top: 0;
     border-right: 3px solid #3E76D5;
+    display: flex;
+    flex-direction: column;
 }
 
 .maybeNav {
     grid-column: 1/3;
 }
 
+.sideBarLinks {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+}
