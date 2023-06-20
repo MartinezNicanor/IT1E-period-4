@@ -8,6 +8,7 @@
     background-size: cover;
     background-position: center;
     height: 90vh;
+    grid-column: 3/13;
 }
 
 .notFound > img {

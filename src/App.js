@@ -24,7 +24,7 @@ function App() {
                 <Route path={"/"} element={user ? <Home /> : <Navigate to="/login" />} />
                 <Route path={"/profile"} element={user ? <Profile /> : <Navigate to="/login" />} />
                 <Route path="/forum" element={user ? <ForumOverview /> : <Navigate to="/login" />} />
-                <Route path="*" element={<Error />} />
+                <Route path='*' element={<Error />} />
             </Routes>
         </div>
     </Router>

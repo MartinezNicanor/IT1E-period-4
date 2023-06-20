@@ -8,7 +8,9 @@ const MaybeNavBar = ({children}) => {
     const [showNavBar , setShowNavBar] = useState(false);
 
     useEffect(() => {
-        if(location.pathname === '/login' || location.pathname === '/register') {
+        if(location.pathname === '/login' ||
+            location.pathname === '/register' ||
+            location.pathname === '*') {
             setShowNavBar(false);
         } else {
             setShowNavBar(true);
