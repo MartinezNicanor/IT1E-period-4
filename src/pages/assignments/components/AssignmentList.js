@@ -8,6 +8,7 @@ import { useAuthContext } from '../../../components/hooks/useAuthContext';
 const AssignmentList = () => {
     const location = useLocation();
     const [topic, setTopic] = useState('');
+    const [topicLink, setTopicLink] = useState('');
     const [assignments, setAssignments] = useState([]);
     const { user } = useAuthContext();
     const navigate = useNavigate();
@@ -15,12 +16,15 @@ const AssignmentList = () => {
     useEffect(() => {
         if (location.pathname === '/assignments/html') {
             setTopic('HTML/CSS');
+            setTopicLink('html');
         }
         else if (location.pathname === '/assignments/php') {
             setTopic('PHP');
+            setTopicLink('php');
         }
         else if (location.pathname === '/assignments/java') {
             setTopic('JAVA');
+            setTopicLink('java');
         } else {
             navigate('/assignments')
         }
@@ -49,7 +53,7 @@ const AssignmentList = () => {
     return (
         <div className="assignmentsList">
             {assignments.map((assignment) => (
-                <Link to={`/assignments/${topic}/${assignment.id}`} key={assignment.id}>
+                <Link to={`/assignments/${topicLink}/${assignment.questionNum}`} key={assignment.id}>
                     <div className="assignmentBox">
                         {assignment.title}
                         <AiOutlineArrowRight />
