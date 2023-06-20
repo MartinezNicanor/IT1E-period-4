@@ -1,21 +1,22 @@
 import './Footer.css'
 import { FaGithub, FaFacebook, FaInstagram } from "react-icons/fa";
+import { Link } from 'react-router-dom'
 
 const Footer = () => {
     const policieList = [
-        {title: "Terms of use", src: "#"},
-        {title: "Privacy policy", src: "#"},
-        {title: "Code of conduct", src: "#"}
+        {title: "Terms of use", src: "*"},
+        {title: "Privacy policy", src: "*"},
+        {title: "Code of conduct", src: "*"}
     ];
 
     const helpList = [
         {title: "Ask the forum", src: "/forum"},
-        {title: "Something", src: "#"},
+        {title: "Something", src: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"},
     ];
 
     const aboutList = [
-        {title: "About QUIZZED", src: "#"},
-        {title: "Our team", src: "#"},
+        {title: "About QUIZZED", src: "*"},
+        {title: "Our team", src: "*"},
     ];
 
     return(
@@ -50,7 +51,7 @@ const FooterList = ({ links, title }) => {
         <div className="listContainer">
             <h3>{ title }</h3>
             {links.map((link) => (
-                <li className = "footerLink"><a href={ link.src }>{ link.title }</a></li>
+                <li className = "footerLink"><Link to={link.src}>{ link.title }</Link></li>
             ))}
         </div>
     );
