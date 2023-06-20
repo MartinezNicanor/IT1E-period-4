@@ -10,7 +10,11 @@
     width: 13vw;
 }
 
-a{
+a {
     text-decoration: none;
     color: #3E76D5;
+}
+
+.profileLink:hover {
+    font-size: 1.45vw;
 }
