@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route, Routes, Navigate} from "react-router-do
 import Home from './pages/home/Home';
 import Footer from './components/footer/Footer';
 import Profile from './pages/profile/Profile';
+import Question from './pages/forum/Question';
 import AskForum from './pages/forum/AskForum';
 import SideBar from "./components/navbar/SideBar";
 import ForumOverview from './pages/forum/ForumOverview';
@@ -26,6 +27,7 @@ function App() {
                 <Route path={"/"} element={user ? <Home /> : <Navigate to="/login" />} />
                 <Route path={"/profile"} element={user ? <Profile /> : <Navigate to="/login" />} />
                 <Route path="/forum" element={user ? <ForumOverview /> : <Navigate to="/login" />} />
+                <Route path="/question/:id" element={<Question />} />
                 <Route path="/askForum" element={user ? <AskForum /> : <Navigate to="/login" />} />
             </Routes>
             <MaybeFooter>
