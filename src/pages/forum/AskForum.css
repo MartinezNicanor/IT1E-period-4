@@ -13,7 +13,7 @@
 .inputContainer {
     background-color: #ECECEC;
     border-radius: 16px;
-    padding: 3vh 3vw;
+    padding: 2vh 2vw;
     display: flex;
     flex-direction: column;
 }
@@ -43,12 +43,12 @@
 
 .inputContainer input::placeholder {
     color: #3E76D5;
-    font-size: 0.7vw;
+    font-size: 0.85vw;
 }
 
 .inputContainer textarea::placeholder {
     color: #3E76D5;
-    font-size: 0.7vw;
+    font-size: 0.85vw;
 }
 
 .radioButtons {
