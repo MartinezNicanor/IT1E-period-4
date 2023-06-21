@@ -5,6 +5,20 @@ import Question from "./components/Question";
 import './css/testPage.css';
 
 function TestPage() {
+
+    const getTestFromLocalStorage = (key) => {
+        const data = localStorage.getItem(key);
+        console.log('data:', data);
+        try {
+            const parsedData = JSON.parse(data);
+            console.log('parsedData:', parsedData);
+        } catch (error) {
+            console.error('Error parsing data from localStorage:', error);
+        }
+    };
+
+    getTestFromLocalStorage('testData');
+
     return (
         <div className="test-container">
             <Header title={"Practice test"} />
