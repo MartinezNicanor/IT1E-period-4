@@ -14,7 +14,7 @@
 }
 
 .topicButton:hover{
-    border: #3E76D5 2px solid;
+    outline: #3E76D5 2px solid;
 }
 
 .subHeader{
@@ -56,7 +56,6 @@
 
 .button:hover{
     cursor: pointer;
-    scale: 1.02 1.02;
     font-size: 0.97rem;
 }
 
@@ -136,4 +135,9 @@ option{
     border-radius: 7px;
     margin-left: 4.6vw;
     cursor: pointer;
+}
+
+.generateTest-container{
+    grid-column: 3/13;
+    padding: 0 7vw;
 }

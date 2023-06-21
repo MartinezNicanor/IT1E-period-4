@@ -33,15 +33,15 @@ export const SideBarData = [
         subNav: [
             {
                 title: "HTML/CSS",
-                path: "/tests",
+                path: "/generateTest",
             },
             {
                 title: "PHP",
-                path: "/tests",
+                path: "/generateTest",
             },
             {
                 title: "Java",
-                path: "/tests",
+                path: "/generateTest",
             },
         ]
 
