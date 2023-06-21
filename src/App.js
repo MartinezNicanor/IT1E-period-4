@@ -6,7 +6,7 @@ import Home from './pages/home/Home';
 import Profile from './pages/profile/Profile';
 import SideBar from "./components/navbar/SideBar";
 import ForumOverview from './pages/forum/ForumOverview';
-import Sample from "./pages/lookThroughSets/Sample";
+import Card from "./pages/lookThroughSets/Card";
 import { useAuthContext } from "./components/hooks/useAuthContext";
 
 function App() {
@@ -24,7 +24,7 @@ function App() {
                 <Route path={"/"} element={user ? <Home /> : <Navigate to="/login" />} />
                 <Route path={"/profile"} element={user ? <Profile /> : <Navigate to="/login" />} />
                 <Route path="/forum" element={user ? <ForumOverview /> : <Navigate to="/login" />} />
-                <Route path="/setOverview" element={<Sample />} />
+                <Route path="/flashcards/setOverview" element={<Card />} />
             </Routes>
         </div>
     </Router>
