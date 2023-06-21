@@ -2,19 +2,46 @@ import "./AskForum.css";
 import Header from "../../components/header/Header";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import jwt_decode from "jwt-decode";
+import { useAuthContext } from "../../components/hooks/useAuthContext";
 
 const AskForum = () => {
+    const { user } = useAuthContext()
     const [title, setTitle] = useState('');
-    const [desc, setDesc] = useState('');
+    const [question, setQuestion] = useState('');
     const [tag, setTag] = useState('other');
+    const [error, setError] = useState(null)
+    const [isLoading, setIsLoading] = useState(null)
 
     const navigate = useNavigate();
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async(e) => {
         e.preventDefault();
-        const post = { title, desc, tag };
-        console.log(post);
-        navigate("/forum");
+        setError(false)
+        setIsLoading(true)
+        const token = jwt_decode(user.token)
+        const userId = token.userId
+
+        const response = await fetch('https://projectinnovate-it1e-backend-production.up.railway.app/forum/newPost', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json; charset=UTF-8', 'Authorization': `Bearer ${user.token}`},
+            body: JSON.stringify({ title, question, userId, tag})
+        })
+        const json = await response.json()
+
+        if (!response.ok) {
+            setError(json.message)
+            setIsLoading(false)
+            setTitle('')
+            setQuestion('')
+            setTag('other')
+        }
+
+        if (response.ok) {
+            alert(json.message)
+            setIsLoading(false)
+            navigate('/forum')
+        }
     }
 
     return (
@@ -38,9 +65,9 @@ const AskForum = () => {
                     <textarea
                         type="text"
                         required
-                        value={desc}
+                        value={question}
                         placeholder="Describe your question..."
-                        onChange={(e) => setDesc(e.target.value)}
+                        onChange={(e) => setQuestion(e.target.value)}
                     />
                 </div>
                 <div className="inputContainer">
@@ -52,7 +79,7 @@ const AskForum = () => {
                                 type="radio"
                                 name="tag"
                                 id="htmlInput"
-                                value="html"
+                                value="HTML/CSS"
                                 placeholder="Give a title to your question..."
                                 onChange={(e) => setTag(e.target.value)}
                             />
@@ -63,7 +90,7 @@ const AskForum = () => {
                                 type="radio"
                                 name="tag"
                                 id="phpInput"
-                                value="php"
+                                value="PHP"
                                 placeholder="Give a title to your question..."
                                 onChange={(e) => setTag(e.target.value)}
                             />
@@ -74,7 +101,7 @@ const AskForum = () => {
                                 type="radio"
                                 name="tag"
                                 id="javaInput"
-                                value="java"
+                                value="JAVA"
                                 placeholder="Give a title to your question..."
                                 onChange={(e) => setTag(e.target.value)}
                             />
@@ -85,7 +112,7 @@ const AskForum = () => {
                                 type="radio"
                                 name="tag"
                                 id="otherInput"
-                                value="other"
+                                value="Other"
                                 placeholder="Give a title to your question..."
                                 onChange={(e) => setTag(e.target.value)}
                             />
@@ -93,7 +120,8 @@ const AskForum = () => {
                         </div>
                     </div>
                 </div>
-                <button className="postQuestion">Post you question</button>
+                <button disabled={ isLoading } className="postQuestion">Post you question</button>
+                {error && <div className="authError">{ error }</div>}
             </form>
         </div>
     );

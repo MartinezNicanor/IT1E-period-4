@@ -7,7 +7,6 @@ import formatDistanceToNow from 'date-fns/formatDistanceToNow'
 const PostList = ({ filter }) => {
     const [posts, setPosts] = useState([])
     const [isLoading, setIsLoading] = useState(null)
-    const [error, setError] = useState(null)
     const { user } = useAuthContext()
 
     useEffect(() => {
@@ -25,7 +24,6 @@ const PostList = ({ filter }) => {
 
             if(!response.ok) {
                 setIsLoading(false)
-                setError(json.errors)
             }
             if (response.ok) {
                 const filteredPosts = filter !== "all"
