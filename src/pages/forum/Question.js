@@ -1,51 +1,97 @@
 import Header from "../../components/header/Header";
 import "./Question.css";
 import Answers from "./components/Answers";
+import Votes from "./components/VotesQuestion"
+import { useParams, useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { useAuthContext } from "../../components/hooks/useAuthContext";
+import jwt_decode from "jwt-decode";
+import formatDistanceToNow from 'date-fns/formatDistanceToNow';
 
 const Question = () => {
-    const question = {
-        title: "How can I center a div?",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sagittis luctus turpis, a tempus velit cursus nec. Donec quis turpis sodales, tincidunt leo eget, consectetur adipiscing elit. Maecenas sagittis luctus turpis imperdiet eros. Curabitur eu placerat urnaconsectetur adipiscing elit. consectetur adipiscing elit. Maecenas sagittis luctus turpisconsectetur adipiscing elit. Maecenas sagittis luctus turpisconsectetur adipiscing elit. Maecenas sagittis luctus turpis. Maecenas sagittis luctus turpis. Fusce porttitor sem lacinia sem sagittis porttitor. Pellentesque euismod laoreet finibus. Donec ornare dolor vel libero luctus porttitor. Vestibulum mattis et magna sit amet luctus. Morbi fringilla tellus elit, non gravida nulla euismod et. Sed at tellus ultricies dui lobortis aliquam nec sit amet sem.",
-        author: "Random user",
-        date: "June 10, 2023",
-        votes: 1000
-    }
+    const { id } = useParams()
+    const [isLoading, setIsLoading] = useState(null)
+    const [commentIsLoading, setCommentIsLoading] = useState(null)
+    const [commentError, setCommentError] = useState(null)
+    const [error, setError] = useState(null)
+    const { user } = useAuthContext()
+    const [post, setPost] = useState([])
+    const [answers, setAnswers] = useState([])
+    const [comment, setComment] = useState('')
+    const navigate = useNavigate()
 
-    const answers = [
-        {
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sagittis luctus turpis, a tempus velit cursus nec. Donec quis turpis sodales, tincidunt leo eget, imperdiet eros. Curabitur eu placerat urna. Fusce porttitor sem lacinia sem sagittis porttitor. Pellentesque euismod laoreet finibus. Donec ornare dolor vel libero luctus porttitor. Vestibulum mattis et magna sit amet luctus. Morbi fringilla tellus elit, non gravida nulla euismod et. Sed at tellus ultricies dui lobortis aliquam nec sit amet sem.",
-            author: "Random user",
-            date: "June 10, 2023",
-            votes: 1000
-        },{
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sagittis luctus turpis, a tempus velit cursus nec. Donec quis turpis sodales, tincidunt leo eget, imperdiet eros. Curabitur eu placerat urna. Fusce porttitor sem lacinia sem sagittis porttitor. Pellentesque euismod laoreet finibus. Donec ornare dolor vel libero luctus porttitor. Vestibulum mattis et magna sit amet luctus. Morbi fringilla tellus elit, non gravida nulla euismod et. Sed at tellus ultricies dui lobortis aliquam nec sit amet sem.",
-            author: "Random user",
-            date: "June 10, 2023",
-            votes: 1000
-        },{
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-            author: "Random user",
-            date: "June 10, 2023",
-            votes: 1000
+    useEffect(() => {
+        setIsLoading(true)
+        setError(false)
+
+        const fetchPost = async () => {
+            const response = await fetch(
+                `https://projectinnovate-it1e-backend-production.up.railway.app/forum/getPost?questionId=${id}`,
+                {
+                    method: 'GET',
+                    headers: { Authorization: `Bearer ${user.token}`},
+                }
+            );
+            const json = await response.json();
+
+            if(!response.ok) {
+                setIsLoading(false)
+                setError(true)
+            }
+            if (response.ok) {
+                setIsLoading(false)
+                setPost(json.question)
+                setAnswers(json.comments)
+            }
+        };
+
+        if (user) {
+            fetchPost()
         }
-    ]
+    }, [user, id]);
+
+    const handleSubmit = async(e) => {
+        e.preventDefault(e)
+
+        setCommentError(false)
+        setCommentIsLoading(true)
+        const token = jwt_decode(user.token)
+        const userId = token.userId
+        const questionId = post._id
+        console.log(comment, questionId, userId);
+
+        const response = await fetch('https://projectinnovate-it1e-backend-production.up.railway.app/forum/newComment', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json; charset=UTF-8', 'Authorization': `Bearer ${user.token}`},
+            body: JSON.stringify({ comment, questionId, userId })
+        })
+        const json = await response.json()
+
+        if (!response.ok) {
+            setCommentIsLoading(false)
+            setCommentError(json.message)
+            console.log(json.message);
+        }
+
+        if (response.ok) {
+            setCommentIsLoading(false)
+            navigate("/forum")
+        }
+    }
 
     return (
         <div className="questionGrid">
-            <Header title={question.title} />
-            <div className="questionContainer">
+            {error && <div></div>}
+            {isLoading && <div className="loadingSpinnerContainer"><div className="loadingSpinner loadingQuestion"></div></div>}
+            {!isLoading && <Header title={post.title} />}
+            {!isLoading && <div className="questionContainer">
                 <div className="question">
                     <div className="questionDescription">
-                        <p className="descriptoinsForum">{ question.description }</p>
-                        <p><strong className="authorStrong">{ question.author } -</strong> asked { question.date }</p>
+                        <p className="descriptoinsForum">{ post.question }</p>
+                        <p className="postTag"><strong className="authorStrong">Topic: </strong>{ post.tag }</p>
+                        <p><strong className="authorStrong">{ post.firstName } { post.LastName } -</strong> asked { post.date && post.date.slice(0, 10) }</p>
                     </div>
-                    <div className="votes">
-                        <p>{ question.votes } votes</p>
-                        <div className="voteButtons">
-                            <span className="material-symbols-outlined">thumb_up</span>
-                            <span className="material-symbols-outlined">thumb_down</span>
-                        </div>
-                    </div>
+                    <Votes post={ post } />
                 </div>
                 <hr />
                 <div className="answers">
@@ -55,15 +101,18 @@ const Question = () => {
                 <hr />
                 <div className="postAnswer">
                     <h4>Post your answer</h4>
-                    <form className="answerForm">
+                    <form className="answerForm" onSubmit={handleSubmit}>
                         <p>Remember to be respectful and clear with your answer!</p>
                         <textarea
                             placeholder="Write your answer..."
+                            value={comment}
+                            onChange={(e) => setComment(e.target.value)}
                         />
-                        <button>Post your answer</button>
+                        {commentError && <div className="authError">{ commentError }</div>}
+                        <button disabled={commentIsLoading}>Post your answer</button>
                     </form>
                 </div>
-            </div>
+            </div>}
         </div>
     );
 }

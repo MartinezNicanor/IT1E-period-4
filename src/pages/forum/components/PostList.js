@@ -39,20 +39,18 @@ const PostList = ({ filter }) => {
         }
     }, [user, filter]);
 
-    console.log(posts);
-
     return (
         <div className="postsList">
             {isLoading && <div className="loadingSpinnerContainer"><div className="loadingSpinner"></div></div>}
             {!isLoading && posts.map(post => (
-                <Link to={`/question/${post.id}`}>
+                <Link to={`/question/${post._id}`}>
                 <div className="postPreview">
                     <h3 className="postTitle">{ post.title }</h3>
                     <p className="postTag"><b>Topic: </b>{ post.tag }</p>
                     <p className="postDesc">{ post.question }</p>
                     <div className="postAuthor">
-                        <p className="postVotes">{ post.votes } upvotes</p>
-                        <p className="author"><b>{ post.author }</b> asked {formatDistanceToNow(new Date(post.date), { addSuffix: true })}</p>
+                        <p className="postVotes">{ post.votes } votes</p>
+                        <p className="author"><b>{ post.firstName } { post.lastName }</b> asked {formatDistanceToNow(new Date(post.date), { addSuffix: true })}</p>
                     </div>
                 </div>
                 </Link>

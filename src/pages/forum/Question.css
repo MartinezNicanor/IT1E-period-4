@@ -82,3 +82,17 @@ hr {
 .descriptoinsForum {
     width: 90%;
 }
+
+.loadingQuestion {
+    margin-top: 50vh;
+}
+
+.voteButton {
+    border: 0;
+    color: #3E76D5;
+}
+
+.voteButton:hover {
+    color: #2D65C4;
+    background-color: transparent;
+}
