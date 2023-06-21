@@ -3,15 +3,14 @@
     flex-direction: column;
     align-items: center;
     margin-top: 10vh;
-    position: relative;
-    background-image: url("../../assets/images/errBackground.png");
+    background-image: url("../../assets/images/circles.svg");
     background-size: cover;
-    background-position: center;
+    background-position: top;
     height: 90vh;
     grid-column: 3/13;
 }
 
-.notFound > img {
+.notFound>img {
     width: 55vw;
 }
 
@@ -23,16 +22,20 @@
     font-size: 4vh;
 }
 
-.textOverlay > h1 {
+.textOverlay>h1 {
     color: #3e76d5;
     margin-top: 15vh;
     margin-bottom: 0;
 }
 
-.textOverlay > h2 {
+.textOverlay>h2 {
     margin-top: 2vh;
 }
 
-.textOverlay > a:hover {
+.textOverlay a {
+    font-size: 3vh;
+}
+
+.textOverlay>a:hover {
     text-decoration: underline #3e76d5;
 }

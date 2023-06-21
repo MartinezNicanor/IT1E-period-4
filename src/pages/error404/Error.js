@@ -1,4 +1,4 @@
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./Error.css"
 import computer from "../../assets/images/computer.png";
 
