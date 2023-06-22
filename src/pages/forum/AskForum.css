@@ -1,0 +1,72 @@
+.askForumContainer {
+    grid-column: 3/13;
+    padding: 0 7vw;
+}
+
+.askForumContainer form {
+    padding: 5vh 6vw;
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+}
+
+.inputContainer {
+    background-color: #ECECEC;
+    border-radius: 16px;
+    padding: 2vh 2vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.inputContainer h2 {
+    margin: 0;
+    color: #3E76D5;
+}
+
+.inputContainer p {
+    margin-top: 1vh;
+}
+
+.inputContainer input {
+    padding: 1vh 1vw;
+    border: 0;
+    border-radius: 10px;
+}
+
+.inputContainer textarea {
+    padding: 1vh 1vw;
+    border: 0;
+    border-radius: 10px;
+    resize: none;
+    height: 10vh;
+}
+
+.inputContainer input::placeholder {
+    color: #3E76D5;
+    font-size: 0.85vw;
+}
+
+.inputContainer textarea::placeholder {
+    color: #3E76D5;
+    font-size: 0.85vw;
+}
+
+.radioButtons {
+    display: flex;
+    gap: 5vw;
+}
+
+.radioButtons div {
+    color: #3E76D5;
+}
+
+.postQuestion {
+    background-color: #3E76D5;
+    font-size: 0.9em;
+    font-weight: 600;
+    color: white;
+    align-self: end;
+    padding: 1vh 1.5vw;
+    border-radius: 10px;
+    border: 0;
+}
