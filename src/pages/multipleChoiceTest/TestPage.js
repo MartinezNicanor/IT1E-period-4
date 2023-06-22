@@ -47,7 +47,7 @@ function TestPage() {
     };
 
     const testData = JSON.parse(localStorage.getItem('testData'));
-    const { topic, numberOfQuestions } = testData;
+    const { topic } = testData;
 
     return (
         <div className="test-container">
