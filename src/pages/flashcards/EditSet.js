@@ -12,7 +12,6 @@ const FlashcardSet = () => {
     ]);
 
     const [title, setTitle] = useState('');
-    const [description, setDescription] = useState('');
     const [savedSets, setSavedSets] = useState([]);
 
     const addCard = () => {
@@ -30,7 +29,6 @@ const FlashcardSet = () => {
         const newSet = { title, flashcards };
         setSavedSets([...savedSets, newSet]);
         setTitle('');
-        setDescription('');
         setFlashcards([
             { term: '', definition: '', id: 1 },
             { term: '', definition: '', id: 2 },
@@ -56,14 +54,6 @@ const FlashcardSet = () => {
                     placeholder="Enter a title, e.g. Information Management"
                     value={title}
                     onChange={(e) => setTitle(e.target.value)}
-                />
-            </div>
-            <div className="descriptionContainer">
-                <textarea
-                    className='descriptionInput'
-                    placeholder="Enter a description"
-                    value={description}
-                    onChange={(e) => setDescription(e.target.value)}
                 />
             </div>
 
