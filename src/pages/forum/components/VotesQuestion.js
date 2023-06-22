@@ -10,7 +10,7 @@ const Votes = ({ post }) => {
     const handleLike = async (e) => {
         e.preventDefault()
 
-        const value = 1
+        const value = "1"
 
         const response = await fetch(`https://projectinnovate-it1e-backend-production.up.railway.app/forum/getPost??questionId=${ id }`, {
             method: 'PATCH',
@@ -31,9 +31,9 @@ const Votes = ({ post }) => {
     const handleDislike = async (e) => {
         e.preventDefault()
 
-        const value = -1
+        const value = "-1"
 
-        const response = await fetch(`https://projectinnovate-it1e-backend-production.up.railway.app/forum/getPost??questionId=${ id }`, {
+        const response = await fetch(`https://projectinnovate-it1e-backend-production.up.railway.app/forum/getPost?questionId=${ id }`, {
             method: 'PATCH',
             headers: {'Content-Type': 'application/json; charset=UTF-8', 'Authorization': `Bearer ${user.token}`},
             body: JSON.stringify({ type, id, value })
