@@ -7,6 +7,7 @@
 
 .menuText{
     grid-column: 1/5;
+    padding: 8vh 2vw;
 }
 
 .servicesContainer {

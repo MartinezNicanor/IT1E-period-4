@@ -1,19 +1,16 @@
+import VotesAnswer from "./VotesAnswer";
+import formatDistanceToNow from 'date-fns/formatDistanceToNow'
+
 const Answers = ({ answers }) => {
     return (
         <div className="answerArray">
         {answers.map(answer => (
             <div className="question">
                 <div className="description">
-                    <p className="descriptoinsForum">{ answer.description }</p>
-                    <p><strong className="authorStrong">{ answer.author } -</strong> asked { answer.date }</p>
+                    <p className="descriptoinsForum">{ answer.comment }</p>
+                    <p><strong className="authorStrong">{ answer.firstName } { answer.lastName } -</strong> commented { formatDistanceToNow(new Date(answer.date), { addSuffix: true }) }</p>
                 </div>
-                <div className="votes">
-                    <p className="votesText">{ answer.votes } votes</p>
-                    <div className="voteButtons">
-                        <span className="material-symbols-outlined">thumb_up</span>
-                        <span className="material-symbols-outlined">thumb_down</span>
-                    </div>
-                </div>
+                <VotesAnswer answer={ answer } />
             </div>
         ))}
         </div>
