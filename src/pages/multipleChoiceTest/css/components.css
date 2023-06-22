@@ -88,5 +88,9 @@ h3{
 .buttonContainer{
     display: flex;
     justify-content: flex-end;
-    margin: 50px 50px 0 0;
+    margin: 50px 50px 50px 0;
+}
+
+.submitTestButton:hover{
+    cursor: pointer;
 }

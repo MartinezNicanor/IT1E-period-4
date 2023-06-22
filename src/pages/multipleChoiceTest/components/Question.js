@@ -1,35 +1,35 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './../css/components.css';
 
+const Question = ({ id, question, possibleAnswers, onAnswerSelect }) => {
+    const [selectedOption, setSelectedOption] = useState('');
 
-const Question = ({question}) => {
+    const handleOptionChange = (event) => {
+        setSelectedOption(event.target.value);
+        onAnswerSelect(event.target.value);
+    };
+
     return (
         <div className="question">
-            <h3>1. {question}</h3>
+            <h3>{id}. {question}</h3>
             <div className="answersContainer">
-                <div className="test-radio-answer">
-                    <input type="radio" id="option1" name="radio-group" />
-                    <label htmlFor="option1"></label>
-                    <h4>Answer 1</h4>
-                </div>
-                <div className="test-radio-answer">
-                    <input type="radio" id="option2" name="radio-group" />
-                    <label htmlFor="option2"></label>
-                    <h4>Answer 2</h4>
-                </div>
-                <div className="test-radio-answer">
-                    <input type="radio" id="option3" name="radio-group" />
-                    <label htmlFor="option3"></label>
-                    <h4>Answer 3</h4>
-                </div>
-                <div className="test-radio-answer">
-                    <input type="radio" id="option4" name="radio-group" />
-                    <label htmlFor="option4"></label>
-                    <h4>Answer 4</h4>
-                </div>
+                {possibleAnswers.map((answer, index) => (
+                    <div className="test-radio-answer" key={index}>
+                        <input
+                            type="radio"
+                            id={`option${id}-${index + 1}`}
+                            name={`radio-group-${id}`}
+                            value={Object.keys(answer)[0]}
+                            checked={selectedOption === Object.keys(answer)[0]}
+                            onChange={handleOptionChange}
+                        />
+                        <label htmlFor={`option${id}-${index + 1}`}></label>
+                        <h4>{Object.values(answer)[0]}</h4>
+                    </div>
+                ))}
             </div>
         </div>
-    )
-}
+    );
+};
 
 export default Question;
