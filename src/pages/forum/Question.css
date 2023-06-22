@@ -1,0 +1,84 @@
+.questionGrid {
+    grid-column: 3/13;
+    padding: 0 7vw;
+}
+
+.questionContainer {
+    padding: 4vh 6vw;
+}
+
+hr {
+    color: #3E76D5;
+    margin: 4vh 0;
+}
+
+.answerForm {
+    padding: 1vh 3vw 3vh 3vw;
+    background-color: #ECECEC;
+    display: flex;
+    flex-direction: column;
+    border-radius: 16px;
+}
+
+.answerForm textarea {
+    border: 0;
+    border-radius: 10px;
+    padding: 1vh 1vw;
+    resize: none;
+    height: 8vh;
+    font-size: 1rem;
+}
+
+.authorStrong {
+    color: #3E76D5;
+}
+
+.answerForm textarea::placeholder {
+    color: #3E76D5;
+    font-size: 0.7vw;
+}
+
+.answerForm button {
+    margin-top: 2vh;
+    align-self: end;
+    border: 0;
+    background-color: #3E76D5;
+    font-size: 0.9em;
+    font-weight: 600;
+    color: white;
+    align-self: end;
+    padding: 1vh 1vw;
+    border-radius: 10px;
+}
+
+.question {
+    background-color: #ECECEC;
+    border-radius: 16px;
+    padding: 3vh 3vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+.questionDescription {
+    width: 44vw;
+}
+
+.voteButtons span {
+    color: #3E76D5;
+    margin: 0 0.4vw;
+}
+
+.answerArray {
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+}
+
+.votesText {
+    display: flex;
+    white-space: nowrap;
+}
+
+.descriptoinsForum {
+    width: 90%;
+}
