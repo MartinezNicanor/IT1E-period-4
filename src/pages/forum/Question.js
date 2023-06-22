@@ -2,7 +2,7 @@ import Header from "../../components/header/Header";
 import "./Question.css";
 import Answers from "./components/Answers";
 import Votes from "./components/VotesQuestion"
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useAuthContext } from "../../components/hooks/useAuthContext";
 import jwt_decode from "jwt-decode";
@@ -17,7 +17,6 @@ const Question = () => {
     const [post, setPost] = useState([])
     const [answers, setAnswers] = useState([])
     const [comment, setComment] = useState('')
-    const navigate = useNavigate()
 
     useEffect(() => {
         setIsLoading(true)
@@ -74,7 +73,7 @@ const Question = () => {
 
         if (response.ok) {
             setCommentIsLoading(false)
-            navigate("/forum")
+            window.location.reload(true)
         }
     }
 

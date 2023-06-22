@@ -16,25 +16,29 @@ function App() {
   const { user } = useAuthContext()
 
   return (
-    <Router>
-        <div className="gridContainer">
-            <MaybeNavBar>
-                <SideBar />
-            </MaybeNavBar>
-            <Routes>
-                <Route path={"/register"} element={!user ? <Register /> : <Navigate to="/" />} />
-                <Route path={"/login"} element={!user ? <Login /> :<Navigate to="/" />} />
-                <Route path={"/"} element={user ? <Home /> : <Navigate to="/login" />} />
-                <Route path={"/profile"} element={user ? <Profile /> : <Navigate to="/login" />} />
-                <Route path="/forum" element={user ? <ForumOverview /> : <Navigate to="/login" />} />
-                <Route path="/question/:id" element={user ? <Question /> : <Navigate to="/login" />} />
-                <Route path="/askForum" element={user ? <AskForum /> : <Navigate to="/login" />} />
-            </Routes>
-            <MaybeFooter>
-                <Footer />
-            </MaybeFooter>
-        </div>
-    </Router>
+    <div>
+        {user !== null &&
+            <Router>
+                <div className="gridContainer">
+                    <MaybeNavBar>
+                        <SideBar />
+                    </MaybeNavBar>
+                    <Routes>
+                        <Route path={"/register"} element={!user ? <Register /> : <Navigate to="/" />} />
+                        <Route path={"/login"} element={!user ? <Login /> :<Navigate to="/" />} />
+                        <Route path={"/"} element={user ? <Home /> : <Navigate to="/login" />} />
+                        <Route path={"/profile"} element={user ? <Profile /> : <Navigate to="/login" />} />
+                        <Route path="/forum" element={user ? <ForumOverview /> : <Navigate to="/login" />} />
+                        <Route path="/question/:id" element={user ? <Question /> : <Navigate to="/login" />} />
+                        <Route path="/askForum" element={user ? <AskForum /> : <Navigate to="/login" />} />
+                    </Routes>
+                    <MaybeFooter>
+                        <Footer />
+                    </MaybeFooter>
+                </div>
+            </Router>
+        }
+    </div>
   );
 }
 
