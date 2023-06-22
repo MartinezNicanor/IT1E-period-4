@@ -11,6 +11,7 @@ import SideBar from "./components/navbar/SideBar";
 import ForumOverview from './pages/forum/ForumOverview';
 import MaybeFooter from "./components/footer/MaybeFooter";
 import { useAuthContext } from "./components/hooks/useAuthContext";
+import TestResults from "./pages/testResults/TestResults";
 
 function App() {
   const { user } = useAuthContext()
@@ -29,6 +30,7 @@ function App() {
                 <Route path="/forum" element={user ? <ForumOverview /> : <Navigate to="/login" />} />
                 <Route path="/question/:id" element={<Question />} />
                 <Route path="/askForum" element={user ? <AskForum /> : <Navigate to="/login" />} />
+                <Route path="/testResults" element={<TestResults />} />
             </Routes>
             <MaybeFooter>
                 <Footer />
