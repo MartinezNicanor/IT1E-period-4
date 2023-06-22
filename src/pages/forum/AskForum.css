@@ -7,7 +7,7 @@
     padding: 5vh 6vw;
     display: flex;
     flex-direction: column;
-    gap: 2vh;
+    gap: 4vh;
 }
 
 .inputContainer {
@@ -69,4 +69,8 @@
     padding: 1vh 1.5vw;
     border-radius: 10px;
     border: 0;
+}
+
+.askForm p {
+    font-size: 1em;
 }

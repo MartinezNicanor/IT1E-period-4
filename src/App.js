@@ -30,6 +30,7 @@ function App() {
                 <Route path="/forum" element={user ? <ForumOverview /> : <Navigate to="/login" />} />
                 <Route path='*' element={<Error />} />
                 <Route path="/question/:id" element={<Question />} />
+                <Route path="/question/:id" element={user ? <Question /> : <Navigate to="/login" />} />
                 <Route path="/askForum" element={user ? <AskForum /> : <Navigate to="/login" />} />
             </Routes>
             <MaybeFooter>
