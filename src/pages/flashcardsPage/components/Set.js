@@ -6,11 +6,11 @@ import flashCardIcon from '../../../assets/images/flashcardIcon.svg'
 const SetList = ({ sets }) => {
   return (
     <div className='setList'>
-        {sets.map(set => (
-            <Link to={`/flashcards/${set.id}`} key={set.id}>
+        {sets && sets.map(set => (
+            <Link to={`/flashcards/${set.deckId}`} key={set.deckId}>
                 <div className="setBox">
                     <img src={flashCardIcon} alt='flashcard icon'/>
-                    <p className='setTitle'>{set.title}</p>
+                    <p className='setTitle'>{set.setTitle}</p>
                 </div>
             </Link>
         ))}
