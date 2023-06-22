@@ -38,7 +38,7 @@ function TestPage() {
             <Header title={"Practice test"} />
             <SubHeader label={"Multiple choice test"} />
             <div className="test-scoreContainer">
-                <h2 className="test-scoreTitle">Your got {score} answers correctly out of {totalQuestions}. You can see the correct answers down below.</h2>
+                <h2 className="test-scoreTitle">You got {score} out of {totalQuestions} answers correct. You can see the correct answers down below.</h2>
             </div>
             <div className="test-questionContainer">
                 {questions.map((question, index) => (
