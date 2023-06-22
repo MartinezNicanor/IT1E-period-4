@@ -46,16 +46,21 @@ function TestPage() {
         navigate('/testResults');
     };
 
+    const testData = JSON.parse(localStorage.getItem('testData'));
+    const { topic, numberOfQuestions } = testData;
+
     return (
         <div className="test-container">
             <Header title={"Practice test"} />
-            <SubHeader label={"Multiple choice test"} />
+            <SubHeader label={` ${topic} Multiple Choice Test`}
+            />
             <div className="questionContainer">
                 {questions.map((question, index) => (
                     <Question
                         key={index}
                         id={index + 1}
                         question={Object.values(question)[0]}
+                        correctAnswer={question.correctAnswer}
                         possibleAnswers={Object.values(question)[1]}
                         onAnswerSelect={(selectedOption) =>
                             handleAnswerSelection(index + 1, selectedOption)
