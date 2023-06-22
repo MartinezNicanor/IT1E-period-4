@@ -26,7 +26,7 @@
     background-color: #3E76D5;
     color: white;
     transform-style: preserve-3d;
-    height: 35vh;
+    height: 45vh;
     transition: 150ms;
     cursor: pointer;
     transform: perspective(1000px) rotateY(var(--rotate-y, 0)) translateY(var(--translate-y, 0));
@@ -85,7 +85,7 @@
 .close-set {
     display: flex;
     justify-content: flex-end;
-    margin-top: 10vh;
+    margin: 8vh 0 3vh 0;
 }
 
 .close-btn {
