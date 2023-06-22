@@ -68,13 +68,16 @@ const Profile = () => {
 
         setNameError("This doesn't work, sorry 😭")
     }
+    
+    const firstName = fname.charAt(0).toUpperCase() + fname.slice(1)
+    const lastName = lname.charAt(0).toUpperCase() + lname.slice(1)
 
     return ( 
         <div className="profileContainer">
             <Header title = "Profile" />
             <div className="userInfo">
                 <div className="info">
-                    <p className="nameTitle">{ fname } { lname }</p>
+                    <p className="nameTitle">{ firstName } { lastName }</p>
                     <p className="emailTitle">{ email }</p>
                 </div>
                 <Avatar src = "" alt = "" />
@@ -82,14 +85,14 @@ const Profile = () => {
             <div className="forms">
                 <form onSubmit={handleNameChange}>    
                 <p className="inputTitle">Change your name</p>
-                <div className="inputContainer">
+                <div className="inputsContainer">
                     <div className="inputs">
                         <label>First Name:</label>
                         <input type="text" name="fname" placeholder="First Name" />
                     </div>
                 </div>
 
-                <div className="inputContainer">
+                <div className="inputsContainer">
                     <div className="inputs">
                         <label>Last Name:</label>
                         <input type="text" name="lname" placeholder="Last Name" />
@@ -101,7 +104,7 @@ const Profile = () => {
 
             <form onSubmit={handlePassChange}>
                 <p className="inputTitle">Change you password</p>
-                <div className="inputContainer">
+                <div className="inputsContainer">
                     <div className="inputs">
                         <label>Current password:</label>
                         <input
@@ -114,7 +117,7 @@ const Profile = () => {
                     </div>
                 </div>
 
-                <div className="inputContainer">
+                <div className="inputsContainer">
                     <div className="inputs">
                         <label>New password:</label>
                         <input
