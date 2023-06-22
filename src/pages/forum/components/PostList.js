@@ -39,10 +39,18 @@ const PostList = ({ filter }) => {
         }
     }, [user, filter]);
 
+    const sortByDate = (a, b) => {
+        const date1 = new Date(a.date)
+        const date2 = new Date (b.date)
+        if (date1 < date2) return 1
+        else if (date1 > date2) return -1
+        else return 0
+    }
+
     return (
         <div className="postsList">
             {isLoading && <div className="loadingSpinnerContainer"><div className="loadingSpinner"></div></div>}
-            {!isLoading && posts.map(post => (
+            {!isLoading && posts.sort(sortByDate).map(post => (
                 <Link to={`/question/${post._id}`}>
                 <div className="postPreview">
                     <h3 className="postTitle">{ post.title }</h3>

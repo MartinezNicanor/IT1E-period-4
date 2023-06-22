@@ -6,7 +6,6 @@ import { useParams, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useAuthContext } from "../../components/hooks/useAuthContext";
 import jwt_decode from "jwt-decode";
-import formatDistanceToNow from 'date-fns/formatDistanceToNow';
 
 const Question = () => {
     const { id } = useParams()
@@ -89,7 +88,7 @@ const Question = () => {
                     <div className="questionDescription">
                         <p className="descriptoinsForum">{ post.question }</p>
                         <p className="postTag"><strong className="authorStrong">Topic: </strong>{ post.tag }</p>
-                        <p><strong className="authorStrong">{ post.firstName } { post.LastName } -</strong> asked { post.date && post.date.slice(0, 10) }</p>
+                        <p><strong className="authorStrong">{ post.firstName } { post.lastName } -</strong> asked { post.date && post.date.slice(0, 10) }</p>
                     </div>
                     <Votes post={ post } />
                 </div>

@@ -3,6 +3,7 @@ import { useAuthContext } from "../../../components/hooks/useAuthContext"
 
 const Votes = ({ answer }) => {
     const [error, setError] = useState(null)
+    const [voted, setVoted] = useState('')
     const { user } = useAuthContext()
     const type = "comment"
     const id = answer._id
@@ -11,6 +12,8 @@ const Votes = ({ answer }) => {
         e.preventDefault()
 
         const value = "1"
+        setError(null)
+        setVoted(null)
 
         const response = await fetch(`https://projectinnovate-it1e-backend-production.up.railway.app/forum/getPost?questionId=${ id }`, {
             method: 'PATCH',
@@ -24,7 +27,7 @@ const Votes = ({ answer }) => {
         }
 
         if (response.ok) {
-            alert(json.message)
+            setVoted(json.message)
         }
     }
 
@@ -32,6 +35,8 @@ const Votes = ({ answer }) => {
         e.preventDefault()
 
         const value = "-1"
+        setError(null)
+        setVoted(null)
 
         const response = await fetch(`https://projectinnovate-it1e-backend-production.up.railway.app/forum/getPost??questionId=${ id }`, {
             method: 'PATCH',
@@ -45,7 +50,7 @@ const Votes = ({ answer }) => {
         }
 
         if (response.ok) {
-            alert(json.message)
+            setVoted(json.message)
         }
     }
 
@@ -56,7 +61,8 @@ const Votes = ({ answer }) => {
                 <button onClick={handleLike} className="material-symbols-outlined voteButton">thumb_up</button>
                 <button onClick={handleDislike} className="material-symbols-outlined voteButton">thumb_down</button>
             </div>
-            {error && <div className="authError">{ error }</div>}
+            {voted && <div className="voteSuccess">{ voted }</div>}
+            {error && <div className="voteError">{ error }</div>}
         </div>
     );
 }
