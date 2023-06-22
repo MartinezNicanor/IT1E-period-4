@@ -17,12 +17,7 @@ const PopUpMenu = ({ onClose, numQuestions, setNumQuestions, difficulty, setDiff
                 />
                 <div className="popUpFlex">
                     <Select label="Choose difficulty:" element={difficultyOptions} value={difficulty} onChange={setDifficulty} />
-                    <Select
-                        label="Number of questions:"
-                        element={questionsCount}
-                        value={numQuestions}
-                        onChange={setNumQuestions}
-                    />
+                    <Select label="Number of questions:" element={questionsCount} value={numQuestions} onChange={setNumQuestions} />
                     <button className="generateButton" onClick={handleTestGeneration}>
                         Generate test
                     </button>

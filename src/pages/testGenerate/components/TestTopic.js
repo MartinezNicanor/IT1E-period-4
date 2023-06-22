@@ -47,7 +47,10 @@ const TestTopic = ({ label }) => {
             setTimeout(async () => {
                 try {
                     const encodedLabel = encodeURIComponent(data.topic);
-                    const url = `https://projectinnovate-it1e-backend-production.up.railway.app/testGeneration?topic=${encodedLabel}&difficulty=${encodeURIComponent(data.difficulty)}&numberOfQuestions=${encodeURIComponent(data.numberOfQuestions)}`;
+                    const encodedDifficulty = encodeURIComponent(data.difficulty);
+                    const encodedNumQuestions = encodeURIComponent(data.numberOfQuestions);
+                    const url = `https://projectinnovate-it1e-backend-production.up.railway.app/testGeneration?topic=${encodedLabel}&difficulty=${encodedDifficulty}&numberOfQuestions=${encodedNumQuestions}`;
+
                     const response = await fetch(url, {
                         method: 'GET',
                         headers: {
@@ -61,16 +64,23 @@ const TestTopic = ({ label }) => {
                     }
 
                     const responseData = await response.json();
-                    resolve(responseData); // Resolve the promise with the fetched data
+                    resolve(responseData);
+                    localStorage.setItem('questions', JSON.stringify(responseData));
                 } catch (error) {
                     console.error('Error:', error.message);
-                    reject(error); // Reject the promise with the error
+                    reject(error);
                 }
-            }, 75000); // Delay the resolution of the promise by 75 seconds (1 minute and 15 seconds)
+            }, 75000);
         });
     };
 
+    const handleNumQuestionsChange = (value) => {
+        setNumQuestions(value);
+    };
 
+    const handleDifficultyChange = (value) => {
+        setDifficulty(value);
+    };
 
     return (
         <>
@@ -82,13 +92,13 @@ const TestTopic = ({ label }) => {
                 <PopUpMenu
                     onClose={closePopUp}
                     numQuestions={numQuestions}
-                    setNumQuestions={setNumQuestions}
+                    setNumQuestions={handleNumQuestionsChange}
                     difficulty={difficulty}
-                    setDifficulty={setDifficulty}
+                    setDifficulty={handleDifficultyChange}
                     handleGenerateTest={handleGenerateTest}
                 />
             )}
-            {loading && <p>Creating test... This could take up to a minute</p>} {/* Display a loading indicator if the request is being processed */}
+            {loading && <p>Our AI is generating the test. This could take up to a minute.</p>}
         </>
     );
 };
