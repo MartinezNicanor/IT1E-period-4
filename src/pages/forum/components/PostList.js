@@ -4,7 +4,7 @@ const PostList = ({ posts }) => {
     return (
         <div className="postsList">
             {posts.map(post => (
-                <Link to={`/posts/${post.id}`}>
+                <Link to={`/question/${post.id}`}>
                 <div className="postPreview">
                     <div className="postDescription">
                         <h3 className="postTitle">{ post.title }</h3>
