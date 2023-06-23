@@ -9,11 +9,15 @@ import Logo from "../../components/FullLogo/FullLogo.js";
 import { useRegister } from '../../components/hooks/useRegister';
 
 const Login = () => {
-    const [firstName, setFname] = useState('');
-    const [lastName, setLname] = useState('');
+    const [fname, setFname] = useState('');
+    const [lname, setLname] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const { register, error, isLoading, errField } = useRegister()
+
+    // turn first and last name first letter into caps
+    const firstName = fname.charAt(0).toUpperCase() + fname.slice(1)
+    const lastName = lname.charAt(0).toUpperCase() + lname.slice(1)
     
     const handleSubmit = async (e) => {
         e.preventDefault()
@@ -33,7 +37,7 @@ const Login = () => {
                             <input 
                                 type="text" 
                                 onChange={(e) => setFname(e.target.value)} 
-                                value={firstName} 
+                                value={fname} 
                             />
                         </div>
                         <label>Last Name:</label>
@@ -42,7 +46,7 @@ const Login = () => {
                             <input 
                                 type="text" 
                                 onChange={(e) => setLname(e.target.value)} 
-                                value={lastName} 
+                                value={lname} 
                             />
                         </div>
                         <label>Email address:</label>
