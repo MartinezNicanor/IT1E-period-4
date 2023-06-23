@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-d
 import Home from './pages/home/Home';
 import Footer from './components/footer/Footer';
 import Profile from './pages/profile/Profile';
+import OpenedAssignment from './pages/assignments/openedAssignment/OpenedAssignment';
 import Flashcards from "./pages/flashcardsPage/Flashcards";
 import GenerateTestPage from "./pages/testGenerate/generateTest";
 import AssignmentsTopics from './pages/assignments/assignmentsTopics/AssignmentsTopics';
@@ -47,6 +48,7 @@ function App() {
                         <Route path={"/progress"} element={user ? <ProgressPage /> : <Navigate to="/login" />} />
                         <Route path="/generateTest" element={user ? <GenerateTestPage /> : <Navigate to="/login" />} />
                         <Route path="/flashcards/new-set" element={<NewSet />} />
+                        <Route path="/assignments/:topic/:id" element={<OpenedAssignment />} />
                     </Routes>
                     <MaybeFooter>
                         <Footer />
