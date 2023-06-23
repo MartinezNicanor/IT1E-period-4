@@ -3,18 +3,21 @@ import './Login.css';
 import { useState } from "react";
 import { Link } from 'react-router-dom'
 import emailIcon from './../../assets/images/letterPhoto.png';
-// import profile from './../../../assets/images/personPhoto.png';
 import lockIcon from './../../assets/images/lockPhoto.png';
 import Logo from "../../components/FullLogo/FullLogo.js";
+import { useLogin } from '../../components/hooks/useLogin';
 
 const Login = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const { login, error, isLoading } = useLogin()
+
+    
 
     const handleSubmit = async (e) => {
         e.preventDefault()
 
-        console.log(email, password);
+        await login(email, password)
     }
 
     return (
@@ -40,7 +43,8 @@ const Login = () => {
                     />
                 </div>
                 <Link to="/register" className="registerLink">New user? <strong>Sign Up</strong></Link>
-                <button className="loginButton"><strong>Log in</strong></button>
+                <button className="loginButton" disabled={ isLoading }><strong>Log in</strong></button>
+                {error && <div className="authError">{ error }</div>}
             </form>
         </div>
     );

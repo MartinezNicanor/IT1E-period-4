@@ -1,6 +1,8 @@
+import avatar from '../../../assets/images/avatar.png'
+
 const Avatar = ({ src, alt }) => {
     const handleOnError = (e) => {
-        e.target.src = "https://www.kindpng.com/picc/m/22-223863_no-avatar-png-circle-transparent-png.png";
+        e.target.src = avatar;
     }
 
     return (
@@ -12,7 +14,7 @@ const Avatar = ({ src, alt }) => {
                 onError={handleOnError} />
             ) : (
                 <img className= "defaultClass"
-                src = {"https://www.kindpng.com/picc/m/22-223863_no-avatar-png-circle-transparent-png.png"}
+                src = { avatar }
                 alt = {alt} />
             ) }
         </div>
