@@ -16,6 +16,7 @@ const Question = ({ id, question, possibleAnswers, onAnswerSelect }) => {
                 {possibleAnswers.map((answer, index) => (
                     <div className="test-radio-answer" key={index}>
                         <input
+                            className="testRadios"
                             type="radio"
                             id={`option${id}-${index + 1}`}
                             name={`radio-group-${id}`}
