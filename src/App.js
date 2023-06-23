@@ -10,6 +10,7 @@ import Question from './pages/forum/Question';
 import AskForum from './pages/forum/AskForum';
 import SideBar from "./components/navbar/SideBar";
 import ForumOverview from './pages/forum/ForumOverview';
+import Error from "./pages/error404/Error";
 import AssignmentView from './pages/assignments/assignmentsList/AssignmentView';
 import MaybeFooter from "./components/footer/MaybeFooter";
 import { useAuthContext } from "./components/hooks/useAuthContext";
@@ -35,6 +36,7 @@ function App() {
                         <Route path="/askForum" element={user ? <AskForum /> : <Navigate to="/login" />} />
                         <Route path="/assignments" element={user ? <AssignmentsTopics /> : <Navigate to="/login" />} />
                         <Route path="/assignments/:topic" element={<AssignmentView />} />
+                        <Route path='*' element={<Error />} />
                     </Routes>
                     <MaybeFooter>
                         <Footer />
