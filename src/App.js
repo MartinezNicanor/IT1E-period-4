@@ -14,6 +14,7 @@ import Error from "./pages/error404/Error";
 import AssignmentView from './pages/assignments/assignmentsList/AssignmentView';
 import MaybeFooter from "./components/footer/MaybeFooter";
 import { useAuthContext } from "./components/hooks/useAuthContext";
+import ProgressPage from "./pages/progress/ProgressPage";
 
 function App() {
   const { user } = useAuthContext()
@@ -37,6 +38,7 @@ function App() {
                         <Route path="/assignments" element={user ? <AssignmentsTopics /> : <Navigate to="/login" />} />
                         <Route path="/assignments/:topic" element={<AssignmentView />} />
                         <Route path='*' element={<Error />} />
+                        <Route path={"/progress"} element={user ? <ProgressPage /> : <Navigate to="/login" />} />
                     </Routes>
                     <MaybeFooter>
                         <Footer />
