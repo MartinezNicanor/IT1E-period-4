@@ -1,0 +1,31 @@
+.setBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 13vw;
+    height: 24vh;
+    background-color: #3e76d5;
+    padding: 1vh;
+    text-align: center;
+    border-radius: 3vh;
+}
+
+.setTitle {
+    color: white;
+    font-weight: 600;
+    margin-top: 2vh;
+    margin-bottom: 0.5vh;
+}
+
+.setBox > img {
+    width: 9vw;
+    margin-top: 1vh;
+}
+
+.setList{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 4vw;
+}
