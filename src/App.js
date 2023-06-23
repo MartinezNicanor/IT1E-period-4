@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-d
 import Home from './pages/home/Home';
 import Footer from './components/footer/Footer';
 import Profile from './pages/profile/Profile';
+import GenerateTestPage from "./pages/testGenerate/generateTest";
 import AssignmentsTopics from './pages/assignments/assignmentsTopics/AssignmentsTopics';
 import Question from './pages/forum/Question';
 import AskForum from './pages/forum/AskForum';
@@ -39,6 +40,7 @@ function App() {
                         <Route path="/assignments/:topic" element={<AssignmentView />} />
                         <Route path='*' element={<Error />} />
                         <Route path={"/progress"} element={user ? <ProgressPage /> : <Navigate to="/login" />} />
+                        <Route path="/generateTest" element={user ? <GenerateTestPage /> : <Navigate to="/login" />} />
                     </Routes>
                     <MaybeFooter>
                         <Footer />
