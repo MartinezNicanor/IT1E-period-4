@@ -23,7 +23,7 @@ const Question = ({ id, question, possibleAnswers, onAnswerSelect }) => {
                             checked={selectedOption === Object.keys(answer)[0]}
                             onChange={handleOptionChange}
                         />
-                        <label htmlFor={`option${id}-${index + 1}`}></label>
+                        <label className="radioLabel" htmlFor={`option${id}-${index + 1}`}></label>
                         <h4>{Object.values(answer)[0]}</h4>
                     </div>
                 ))}

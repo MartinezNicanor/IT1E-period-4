@@ -3,6 +3,7 @@ import { FaArrowRight } from 'react-icons/fa';
 import PopUpMenu from './PopUpMenu.js';
 import { useAuthContext } from '../../../components/hooks/useAuthContext';
 import { useNavigate } from 'react-router-dom';
+import '../css/components.css'
 
 const TestTopic = ({ label }) => {
     const navigate = useNavigate();
@@ -98,7 +99,12 @@ const TestTopic = ({ label }) => {
                     handleGenerateTest={handleGenerateTest}
                 />
             )}
-            {loading && <p>Our AI is generating the test. This could take up to a minute.</p>}
+            {loading && 
+                <div className='testLoading'>
+                    <p>Our AI is generating the test. This could take up to a minute.</p>
+                    <div className="loadingSpinnerContainerTest"><div className="loadingSpinnerTest"></div></div>
+                </div>
+            }
         </>
     );
 };
