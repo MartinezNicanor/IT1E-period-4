@@ -1,6 +1,7 @@
 import Header from "../../components/header/Header";
 import "./Question.css";
 import Answers from "./components/Answers";
+import Error from "../error404/Error.js"
 import Votes from "./components/VotesQuestion"
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
@@ -79,10 +80,10 @@ const Question = () => {
 
     return (
         <div className="questionGrid">
-            {error && <div></div>}
+            {error && <Error />}
             {isLoading && <div className="loadingSpinnerContainer"><div className="loadingSpinner loadingQuestion"></div></div>}
-            {!isLoading && <Header title={post.title} />}
-            {!isLoading && <div className="questionContainer">
+            {!error && !isLoading && <Header title={post.title} />}
+            {!error && !isLoading && <div className="questionContainer">
                 <div className="question">
                     <div className="questionDescription">
                         <p className="descriptoinsForum">{ post.question }</p>
