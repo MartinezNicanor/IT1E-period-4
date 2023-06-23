@@ -43,7 +43,7 @@
     position: relative;
 }
 
-input[type="radio"] {
+.testRadios {
     position: absolute;
     left: -9999px;
 }
@@ -57,7 +57,7 @@ input[type="radio"] {
     margin-right: 15px;
 }
 
-input[type="radio"]:checked + .radioLabel {
+.testRadios:checked + .radioLabel {
     background-color: #2656C2;
 }
 
