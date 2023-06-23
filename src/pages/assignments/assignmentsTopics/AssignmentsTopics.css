@@ -1,0 +1,107 @@
+.topicsMainContainer {
+    grid-column: 3/13;
+    padding: 0 7vw;
+}
+
+.selectATopic {
+    font-size: 1.6em;
+}
+
+.assignmentTopicDesc {
+    font-size: 1.2em;
+}
+
+.assignmentsTopicsContainer {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    margin-top: 10vh;
+
+}
+
+.htmlCssContainer {
+    display: flex;
+    justify-content: space-evenly;
+    grid-column: 1/6;
+    border: solid #3E76D5 2px;
+    padding: 2vh;
+    border-radius: 2vh;
+    background-color: #3E76D5;
+    color: white;
+    width: 18vw;
+
+
+}
+
+.htmlvec {
+    width: 8vw;
+}
+
+.htmlCssDesc {
+    grid-column: 6/10;
+    align-self: center;
+}
+
+.phpContainer {
+    display: flex;
+    justify-content: space-evenly;
+    grid-column: 9/13;
+    border: solid #3E76D5 2px;
+    padding: 2vh;
+    border-radius: 2vh;
+    background-color: #3E76D5;
+    grid-row: 3/4;
+    color: white;
+    width: 18vw;
+
+}
+
+.phpvec {
+    width: 6vw;
+}
+
+.phpDesc {
+    grid-column: 3/7;
+    grid-row: 3/4;
+    align-self: center;
+}
+
+.javaContainer {
+    display: flex;
+    justify-content: space-evenly;
+    grid-column: 1/6;
+    border: solid #3E76D5 2px;
+    padding: 2vh;
+    border-radius: 2vh;
+    background-color: #3E76D5;
+    grid-row: 5/6;
+    color: white;
+    width: 18vw;
+}
+
+.javavec {
+    width: 6vw;
+}
+
+.javaDesc {
+    grid-column: 6/10;
+    grid-row: 5/6;
+    align-self: center;
+}
+
+.svgLine {
+    position: absolute;
+    z-index: -1;
+}
+
+.svgLine>svg {
+    width: 50vw;
+    height: 87vh;
+    margin-left: 10vw;
+}
+
+@media only screen and (max-width: 1350px) {
+    .svgLine>svg {
+        display: none;
+    }
+}
