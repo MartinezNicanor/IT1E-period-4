@@ -64,7 +64,7 @@ function Card({}) {
 
     return (
         <div className="set-overview-container">
-            <Header title={"Set - Random name"} />
+            <Header title={`Set`} />
             <div className="flashcards-container">
                 <div className="card-grid">
                     <Flashcard flashcard={targetCard} key={targetCard.id} />
