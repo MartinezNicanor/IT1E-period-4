@@ -2,10 +2,10 @@
     margin-left: 1vh;
 }
 
-.logo{
+.logoNavContainer {
     margin: 3vh 0.63vh 2.53vh 0vh;
 }
 
-.logo > img{
+.logoNavbar {
     width: 13vw;
 }
