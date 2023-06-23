@@ -4,9 +4,11 @@ import './Set.css'
 import flashCardIcon from '../../../assets/images/flashcardIcon.svg'
 
 const SetList = ({ sets }) => {
+    console.log(sets);
   return (
     <div className='setList'>
-        {sets && sets.map(set => (
+        {!Array.isArray(sets) && <div className="noDecksFound">No sets found, create your first set!</div>}
+        {Array.isArray(sets) && sets.map(set => (
             <Link to={`/flashcards/${set.deckId}`} key={set.deckId}>
                 <div className="setBox">
                     <img src={flashCardIcon} alt='flashcard icon'/>

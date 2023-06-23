@@ -28,6 +28,16 @@ function App() {
 
   return (
     <div>
+        {user === null &&
+        <Router>
+            <div className="gridContainer">
+                <Routes>
+                    <Route path={"/"} element={<Login />} />
+                    <Route path={"/register"} element={<Register />} />
+                </Routes>
+            </div>
+        </Router>
+        }
         {user !== null &&
             <Router>
                 <div className="gridContainer">
@@ -35,22 +45,20 @@ function App() {
                         <SideBar />
                     </MaybeNavBar>
                     <Routes>
-                        <Route path={"/register"} element={!user ? <Register /> : <Navigate to="/" />} />
-                        <Route path={"/login"} element={!user ? <Login /> :<Navigate to="/" />} />
-                        <Route path={"/"} element={user ? <Home /> : <Navigate to="/login" />} />
-                        <Route path={"/profile"} element={user ? <Profile /> : <Navigate to="/login" />} />
-                        <Route path="/forum" element={user ? <ForumOverview /> : <Navigate to="/login" />} />
+                        <Route path={"/"} element={<Home />} />
+                        <Route path={"/profile"} element={<Profile />} />
+                        <Route path="/forum" element={<ForumOverview />} />
                         <Route path="/flashcards" element={<Flashcards />} />
                         <Route path="/flashcards/:id" element={<Card />} />
-                        <Route path="/question/:id" element={user ? <Question /> : <Navigate to="/login" />} />
-                        <Route path="/askForum" element={user ? <AskForum /> : <Navigate to="/login" />} />
-                        <Route path="/assignments" element={user ? <AssignmentsTopics /> : <Navigate to="/login" />} />
-                        <Route path="/testResults" element={user ? <TestResults /> : <Navigate to="/login" />} />
-                        <Route path="/assignments/:topic" element={user ? <AssignmentView /> : <Navigate to="/login" />} />
+                        <Route path="/question/:id" element={<Question />} />
+                        <Route path="/askForum" element={<AskForum />} />
+                        <Route path="/assignments" element={<AssignmentsTopics />} />
+                        <Route path="/testResults" element={<TestResults />} />
+                        <Route path="/assignments/:topic" element={<AssignmentView />} />
                         <Route path='*' element={<Error />} />
-                        <Route path={"/progress"} element={user ? <ProgressPage /> : <Navigate to="/login" />} />
-                        <Route path="/generateTest" element={user ? <GenerateTestPage /> : <Navigate to="/login" />} />
-                        <Route path="/test" element={user ? <TestPage /> : <Navigate to="/login" />} />
+                        <Route path={"/progress"} element={<ProgressPage />} />
+                        <Route path="/generateTest" element={<GenerateTestPage />} />
+                        <Route path="/test" element={<TestPage />} />
                         <Route path="/flashcards/new-set" element={<NewSet />} />
                         <Route path="/assignments/:topic/:id" element={<OpenedAssignment />} />
                     </Routes>

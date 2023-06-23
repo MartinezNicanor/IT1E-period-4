@@ -25,7 +25,7 @@ export const useRegister = () => {
             setErrField(json.field)
         }
         if(response.ok) {
-            navigate("/login")
+            navigate("/")
             alert(json.message)
         }
     }

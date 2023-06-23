@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const Add = () => {
     return (
-        <Link to={"/flashcards/create-set"}>
+        <Link to={"/flashcards/new-set"}>
             <div className="add">
                 <MdOutlineAddToPhotos color="white" size={90}/>
                 <p>Add</p>
