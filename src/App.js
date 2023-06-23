@@ -24,7 +24,7 @@ function App() {
                 <Route path={"/"} element={user ? <Home /> : <Navigate to="/login" />} />
                 <Route path={"/profile"} element={user ? <Profile /> : <Navigate to="/login" />} />
                 <Route path="/forum" element={user ? <ForumOverview /> : <Navigate to="/login" />} />
-                <Route path="/flashcards/setOverview" element={<Card />} />
+                <Route path="/flashcards/:id" element={<Card />} />
             </Routes>
         </div>
     </Router>

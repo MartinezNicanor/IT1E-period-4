@@ -27,6 +27,7 @@
     color: white;
     transform-style: preserve-3d;
     height: 45vh;
+    width: 20vw;
     transition: 150ms;
     cursor: pointer;
     transform: perspective(1000px) rotateY(var(--rotate-y, 0)) translateY(var(--translate-y, 0));
@@ -69,14 +70,14 @@
 }
 
 .arrow-left {
-    margin-right: 3vw;
+    margin-right: 5vw;
     cursor: pointer;
     background-color: white;
     border: none;
 }
 
 .arrow-right {
-    margin-left: 3vw;
+    margin-left: 5vw;
     cursor: pointer;
     background-color: white;
     border: none;
