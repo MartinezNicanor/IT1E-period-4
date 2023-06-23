@@ -7,6 +7,7 @@ import * as TbIcons from 'react-icons/tb';
 export const SideBarData = [
     {
         title: "Assignments",
+        path: "/assignments",
         icon: <BsIcons.BsJournalCode />,
         iconClosed: <BsIcons.BsArrowDownShort />,
         iconOpened: <BsIcons.BsArrowUpShort />,
