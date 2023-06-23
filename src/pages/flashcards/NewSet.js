@@ -3,9 +3,11 @@ import './NewSet.css'
 import Header from '../../components/header/Header'
 import jwt_decode from "jwt-decode";
 import { useAuthContext } from "../../components/hooks/useAuthContext";
+import { useNavigate } from "react-router-dom"
 
 const FlashcardSet = () => {
     const { user } = useAuthContext();
+    const navigate = useNavigate()
     const [flashcards, setFlashcards] = useState([
         // defining default state of the cards of the set which is empty
         { term: '', definition: '', id: 1 },
@@ -33,7 +35,7 @@ const FlashcardSet = () => {
 
         if (response.ok) {
             alert(json.message)
-            //navigate('/forum')
+            navigate('/flashcards')
         }
     }
     //empty state of the title
