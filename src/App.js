@@ -13,6 +13,7 @@ import AskForum from './pages/forum/AskForum';
 import SideBar from "./components/navbar/SideBar";
 import ForumOverview from './pages/forum/ForumOverview';
 import Card from "./pages/lookThroughSets/Card";
+import NewSet from "./pages/flashcards/NewSet";
 import Error from "./pages/error404/Error";
 import AssignmentView from './pages/assignments/assignmentsList/AssignmentView';
 import MaybeFooter from "./components/footer/MaybeFooter";
@@ -45,6 +46,7 @@ function App() {
                         <Route path='*' element={<Error />} />
                         <Route path={"/progress"} element={user ? <ProgressPage /> : <Navigate to="/login" />} />
                         <Route path="/generateTest" element={user ? <GenerateTestPage /> : <Navigate to="/login" />} />
+                        <Route path="/flashcards/new-set" element={<NewSet />} />
                     </Routes>
                     <MaybeFooter>
                         <Footer />
