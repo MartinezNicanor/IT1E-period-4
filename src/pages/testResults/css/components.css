@@ -1,0 +1,103 @@
+.subHeader{
+    margin: 5vh 0 5vh 0;
+    color: #3E76D5;
+}
+
+.test-questionContainer{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    grid-gap: 10px;
+}
+
+.test-question{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 6.3vw;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.answersContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 1.6vh;
+    margin: 0 2vw;
+}
+
+.styled-question-button{
+    display: inline-block;
+    padding: 10px 10px;
+    border: 1px solid #2656C2;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.test-radio-answer {
+    display: flex;
+    align-items: center;
+}
+
+.radio-group {
+    position: relative;
+}
+
+input[type="radio"] {
+    position: absolute;
+    left: -9999px;
+}
+
+/*label {*/
+/*    display: inline-block;*/
+/*    padding: 10px 10px;*/
+/*    border: 2px solid #2656C2;*/
+/*    border-radius: 15px;*/
+/*    margin-right: 15px;*/
+/*}*/
+
+h4{
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+h3{
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.submitTestButton {
+    margin-top: 1.5vh;
+    width: 10vw;
+    font-size: 0.9rem;
+    align-self: center;
+    background-color: #3E76D5;
+    border: 0;
+    border-radius: 6px;
+    padding: 1vh 2vh;
+    color: white;
+}
+
+.buttonContainer{
+    display: flex;
+    justify-content: center;
+    margin: 50px 50px 50px 0;
+}
+
+.submitTestButton:hover{
+    cursor: pointer;
+}
+
+.CorrectAnswer{
+    color: #3E76D5;
+    font-weight: bold;
+}
+
+.test-scoreContainer{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3vh;
+    color: #3E76D5;
+}

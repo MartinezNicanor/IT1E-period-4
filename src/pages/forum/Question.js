@@ -83,7 +83,7 @@ const Question = () => {
             {error && <Error />}
             {isLoading && <div className="loadingSpinnerContainer"><div className="loadingSpinner loadingQuestion"></div></div>}
             {!error && !isLoading && <Header title={post.title} />}
-            {!error && !isLoading && <div className="questionContainer">
+            {!error && !isLoading && <div className="questionsContainer">
                 <div className="question">
                     <div className="questionDescription">
                         <p className="descriptoinsForum">{ post.question }</p>

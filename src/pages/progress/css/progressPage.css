@@ -1,0 +1,11 @@
+.progress-container{
+    grid-column: 3/13;
+    padding: 0 7vw;
+}
+
+.progressBarLabels{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3vh;
+    color: #3E76D5;
+}
