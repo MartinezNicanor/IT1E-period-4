@@ -9,7 +9,7 @@
     grid-gap: 10px;
 }
 
-.question{
+.test-question-container{
     display: flex;
     flex-direction: column;
     justify-content: center;

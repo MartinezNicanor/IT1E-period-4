@@ -12,7 +12,9 @@ function TestPage() {
 
     useEffect(() => {
         const data = localStorage.getItem('questions');
-        if (!data) {
+        const testData = JSON.parse(localStorage.getItem('testData'));
+
+        if (!data || !testData) {
             navigate('/generateTest');
         } else {
             try {
@@ -47,7 +49,10 @@ function TestPage() {
     };
 
     const testData = JSON.parse(localStorage.getItem('testData'));
-    const { topic } = testData;
+    let topic = "";
+    if (testData) {
+        topic = testData.topic;
+    }
 
     return (
         <div className="test-container">

@@ -10,7 +10,7 @@ const Question = ({ id, question, possibleAnswers, onAnswerSelect }) => {
     };
 
     return (
-        <div className="question">
+        <div className="test-question-container">
             <h3>{id}. {question}</h3>
             <div className="answersContainer">
                 {possibleAnswers.map((answer, index) => (
