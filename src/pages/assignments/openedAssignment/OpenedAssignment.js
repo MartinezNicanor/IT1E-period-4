@@ -108,7 +108,7 @@ const OpenedAssignment = () => {
                         </div>
                     </div>
                     <div className="timerContainer">
-                        <Timer />
+                        <Timer title={assignment.title} />
                     </div>
                 </div>
             )}

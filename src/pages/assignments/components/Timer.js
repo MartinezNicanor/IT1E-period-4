@@ -1,10 +1,17 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { useParams, useLocation } from 'react-router-dom'
 import './Timer.css'
+import { useAuthContext } from '../../../components/hooks/useAuthContext';
 
-const Timer = () => {
+const Timer = ({ title }) => {
     const [timeRemaining, setTimeRemaining] = useState(5400); //1h30m in sec
     const [timerOn, setTimerOn] = useState(false); //default state of timer is not running
     const timerRef = useRef();
+    const { user } = useAuthContext()
+    const { id } = useParams()
+    const location = useLocation()
+    const [completedMessage, setCompletedMessage] = useState('')
+    const [error, setError] = useState('')
 
     useEffect(() => { //hook to start/stop timer
         //checking if timer is running, if running an interval is set to count down 1000ms 
@@ -41,9 +48,33 @@ const Timer = () => {
         setTimerOn(false);
     }; //pause button to change useState of timerOn to false
 
-    const handleEnd = () => {
-        setTimerOn(false);
-        setTimeRemaining(0);
+    const handleEnd = async (e) => {
+        e.preventDefault()
+        const completed = true
+        let topicToUpdate = '';
+        
+        if (location.pathname === `/assignments/html/${id}`) {
+            topicToUpdate = 'HTML/CSS';
+        } else if (location.pathname === `/assignments/php/${id}`) {
+            topicToUpdate = 'PHP';
+        } else if (location.pathname === `/assignments/java/${id}`) {
+            topicToUpdate = 'JAVA';
+        }
+        
+
+        const response = await fetch(`https://projectinnovate-it1e-backend-production.up.railway.app/assignments/specificAssignement`, {
+            method: 'PATCH',
+            headers: {'Content-Type': 'application/json; charset=UTF-8', 'Authorization': `Bearer ${user.token}`},
+            body: JSON.stringify({ topic: topicToUpdate, title, completed })
+        })
+
+        const json = await response.json()
+
+        if (response.ok) {
+            setCompletedMessage(json.message)
+        } else {
+            setError(json.message)
+        }
   }; //end button to change useState of timerOn to false and changed timeremaining to 0
 
   return (
@@ -55,9 +86,9 @@ const Timer = () => {
             ) : (
                 <button className = "timerBtn" onClick={handlePause}>Pause timer</button>
             )}
-            <button className = "timerBtn" onClick={handleEnd}>End timer</button> 
+            <button className = "timerBtn" onClick={handleEnd}>End assignment</button> 
         </div>  
-        
+        {completedMessage && <div className='successMessage'>{ completedMessage }</div>}
     </div>
   );
 };

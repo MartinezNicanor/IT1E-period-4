@@ -3,6 +3,7 @@
     flex-direction: column;
     gap: 1vh;
     width: 18vw;
+    align-items: center;
 }
 
 .remainingTime{
@@ -14,6 +15,7 @@
 .timerBtnContainer{
     display: flex;
     justify-content: space-evenly;
+    gap: 1vw;
 }
 
 .timerBtn{
@@ -26,4 +28,15 @@
     border-radius: 1vh;
     font-size: 1.8vh;
     font-weight: bold;
+}
+
+.successMessage {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    background: #baffdd;
+    border: 1px solid #00b460;
+    color: #00b460;
+    border-radius: 8px;
+    margin: 2vh 0 0 0;
 }
