@@ -13,6 +13,7 @@ import Question from './pages/forum/Question';
 import AskForum from './pages/forum/AskForum';
 import SideBar from "./components/navbar/SideBar";
 import ForumOverview from './pages/forum/ForumOverview';
+import TestPage from './pages/multipleChoiceTest/TestPage';
 import Card from "./pages/lookThroughSets/Card";
 import NewSet from "./pages/flashcards/NewSet";
 import Error from "./pages/error404/Error";
@@ -45,10 +46,11 @@ function App() {
                         <Route path="/askForum" element={user ? <AskForum /> : <Navigate to="/login" />} />
                         <Route path="/assignments" element={user ? <AssignmentsTopics /> : <Navigate to="/login" />} />
                         <Route path="/testResults" element={user ? <TestResults /> : <Navigate to="/login" />} />
-                        <Route path="/assignments/:topic" element={<AssignmentView />} />
+                        <Route path="/assignments/:topic" element={user ? <AssignmentView /> : <Navigate to="/login" />} />
                         <Route path='*' element={<Error />} />
                         <Route path={"/progress"} element={user ? <ProgressPage /> : <Navigate to="/login" />} />
                         <Route path="/generateTest" element={user ? <GenerateTestPage /> : <Navigate to="/login" />} />
+                        <Route path="/test" element={user ? <TestPage /> : <Navigate to="/login" />} />
                         <Route path="/flashcards/new-set" element={<NewSet />} />
                         <Route path="/assignments/:topic/:id" element={<OpenedAssignment />} />
                     </Routes>
