@@ -1,6 +1,7 @@
 import React from 'react'
 import * as BsIcons from 'react-icons/bs';
 import * as MdIcons from 'react-icons/md';
+import * as TbIcons from 'react-icons/tb';
 
 
 export const SideBarData = [
@@ -28,22 +29,21 @@ export const SideBarData = [
     },
     {
         title: "Tests",
-        path: "/tests",
         icon: <BsIcons.BsFileEarmarkCode />,
         iconClosed: <BsIcons.BsArrowDownShort />,
         iconOpened: <BsIcons.BsArrowUpShort />,
         subNav: [
             {
                 title: "HTML/CSS",
-                path: "/tests/html",
+                path: "/generateTest",
             },
             {
                 title: "PHP",
-                path: "/tests/php",
+                path: "/generateTest",
             },
             {
                 title: "Java",
-                path: "/tests/java",
+                path: "/generateTest",
             },
         ]
 
@@ -57,6 +57,11 @@ export const SideBarData = [
         title: "Forum",
         path: "/forum",
         icon: <BsIcons.BsChatText />,
+    },
+    {
+        title: "Flashcards",
+        path: "/flashcards",
+        icon: <TbIcons.TbCards />,
     },
 
 ]

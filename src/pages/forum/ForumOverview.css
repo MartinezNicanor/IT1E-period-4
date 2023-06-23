@@ -1,0 +1,135 @@
+.overviewContainer {
+    grid-column: 3/13;
+    padding: 0 7vw;
+    margin-bottom: 8vh;
+}
+
+.overviewHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 3vh;
+}
+
+.overviewHeader a {
+    text-decoration: none;
+}
+
+.postsList a {
+    text-decoration: none;
+    color: black;
+}
+
+.askButton {
+    border: 2px solid #3E76D5;
+    border-radius: 12px;
+    background-color: #3E76D5;
+    color: white;
+    padding: 1.5vh 1.5vw;
+    font-family: 'Montserrat';
+    font-size: 1em;
+    font-weight: 600;
+    text-decoration: none;
+    list-style: none;
+}
+
+.postsList {
+    margin-top:3vh;
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+}
+
+.postPreview{
+    padding: 2vh 3vw;
+    background-color: #ECECEC;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.postPreview:hover {
+    box-shadow: #3E76D5 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+
+.postDesc {
+    font-size: 1em;
+}
+
+.postDescription {
+    width: 45vw;
+}
+
+.postTitle {
+    color: #3E76D5;
+    margin-bottom: 0;
+}
+
+.postTag {
+    margin-bottom: 0;
+}
+
+.author b {
+    color: #3E76D5;
+    margin-bottom: 0;
+}
+
+.date {
+    margin-top: 0;
+}
+
+.postAuthor p {
+    white-space: nowrap;
+}
+
+.forumOverview {
+    display: flex;
+    flex-direction: column;
+    padding: 0 6vw;
+}
+
+.filterButtons {
+    align-self: end;
+    display: flex;
+    gap: 0.3vw;
+}
+
+.filterButtons button {
+    background-color: #3E76D5;
+    border: 0;
+    color: white;
+    padding: 1vh 0.9vw;
+    font-size: 0.9em;
+    font-weight: 600;
+    margin: 0.5vh 0;
+}
+
+.javaFilter {
+    border-radius: 8px 0px 0px 8px;
+}
+
+.allFilter {
+    border-radius: 0px 8px 8px 0px;
+}
+
+.loadingSpinnerContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 150px;
+    margin-top: 8vh;
+  }
+  
+  .loadingSpinner {
+    border: 16px solid #ECECEC;
+    border-top: 16px solid #3E76D5;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }

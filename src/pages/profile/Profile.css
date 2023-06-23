@@ -1,3 +1,8 @@
+.profileContainer {
+    grid-column: 3/13;
+    padding: 0 7vw;
+}
+
 .nameTitle {
     font-size: 2.2em;
     font-weight: bold;
@@ -47,7 +52,7 @@
     gap: 10px;
 }
 
-.inputContainer {
+.inputsContainer {
     margin-bottom: 10px;
 }
 
@@ -63,7 +68,7 @@
     justify-content: space-between;
 }
 
-form button {
+.profileButton {
     color: #3E76D5;
     background-color: white;
     border: #3E76D5;
@@ -81,4 +86,15 @@ form button {
     border-radius: 25%;
     padding: 6px;
     border: 3px solid #3E76D5;
+}
+
+.authError {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    background: #ffefef;
+    border: 1px solid #e7195a;
+    color: #e7195a;
+    border-radius: 8px;
+    margin: 2vh 0 0 0;
 }

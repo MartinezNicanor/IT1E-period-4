@@ -1,10 +1,11 @@
-.logOutBtn{
-    margin: 58vh 0vh 3vh 0vh;
+.logOutBtn {
     display: flex;
+    margin-bottom: 2vh;
     align-items: center;
+    gap: 0.5vw;
 }
 
-button{
+.logOutBtn button {
     border: none;
     background-color: white;
     font-family: Montserrat;
