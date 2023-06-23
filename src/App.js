@@ -20,6 +20,7 @@ import Error from "./pages/error404/Error";
 import AssignmentView from './pages/assignments/assignmentsList/AssignmentView';
 import MaybeFooter from "./components/footer/MaybeFooter";
 import { useAuthContext } from "./components/hooks/useAuthContext";
+import TestResults from "./pages/testResults/TestResults";
 import ProgressPage from "./pages/progress/ProgressPage";
 
 function App() {
@@ -44,6 +45,7 @@ function App() {
                         <Route path="/question/:id" element={user ? <Question /> : <Navigate to="/login" />} />
                         <Route path="/askForum" element={user ? <AskForum /> : <Navigate to="/login" />} />
                         <Route path="/assignments" element={user ? <AssignmentsTopics /> : <Navigate to="/login" />} />
+                        <Route path="/testResults" element={user ? <TestResults /> : <Navigate to="/login" />} />
                         <Route path="/assignments/:topic" element={user ? <AssignmentView /> : <Navigate to="/login" />} />
                         <Route path='*' element={<Error />} />
                         <Route path={"/progress"} element={user ? <ProgressPage /> : <Navigate to="/login" />} />
