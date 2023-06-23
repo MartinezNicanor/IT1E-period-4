@@ -1,0 +1,45 @@
+.USPContainer{
+    display: flex;
+    margin: 10vh 3vh 3vh 6vh;
+    flex-direction: column;
+    align-items: center;
+}
+
+.USPItems{
+    display: flex;
+    justify-content: space-around;
+    padding: 0 6vw;
+    gap: 5vw;
+}
+
+.USPheader{
+    display: flex;
+    text-align: center;
+    color: #3E76D5;
+    margin-bottom: 10vh;
+}
+.flashCardSystem{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+   
+}
+
+.aiIncorporation{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    
+    
+}
+
+.community{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+
+}
+

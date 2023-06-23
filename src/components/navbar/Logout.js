@@ -5,7 +5,7 @@ import { useLogout } from '../hooks/useLogout';
 
 function Logout() {
     const { logout } = useLogout()
-
+    
     const handleClick = () => {
         logout()
     }
