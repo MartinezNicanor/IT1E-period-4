@@ -11,9 +11,11 @@ const AssignmentList = () => {
     const [topicLink, setTopicLink] = useState('');
     const [assignments, setAssignments] = useState([]);
     const { user } = useAuthContext();
+    const [isLoading, setIsLoading] = useState(null)
     const navigate = useNavigate();
 
     useEffect(() => {
+        setIsLoading(true)
         if (location.pathname === '/assignments/html') {
             setTopic('HTML/CSS');
             setTopicLink('html');
@@ -41,6 +43,7 @@ const AssignmentList = () => {
 
             if (response.ok) {
                 setAssignments(json.assignments);
+                setIsLoading(false)
             }
         };
 
@@ -52,7 +55,8 @@ const AssignmentList = () => {
 
     return (
         <div className="assignmentsList">
-            {assignments.map((assignment) => (
+            {isLoading && <div className="loadingSpinnerContainer"><div className="loadingSpinner loadingQuestion"></div></div>}
+            {!isLoading && assignments.map((assignment) => (
                 <Link to={`/assignments/${topicLink}/${assignment.questionNum}`} key={assignment.id}>
                     <div className="assignmentBox">
                         {assignment.title}
