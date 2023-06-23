@@ -4,11 +4,10 @@ import Header from '../../../components/header/Header';
 import htmlCssVec from '../../../assets/images/htmlcss.svg';
 import phpVec from '../../../assets/images/php.svg';
 import javaVec from '../../../assets/images/java.svg';
-import { Link, useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { useAuthContext } from '../../../components/hooks/useAuthContext';
 
 const AssignmentsTopics = () => {
-    const { topic } = useParams();
     const [HTMLQuestionNum, setHTMLQuestionNum] = useState();
     const [PHPQuestionNum, setPHPQuestionNum] = useState();
     const [JAVAQuestionNum, setJAVAQuestionNum] = useState();
@@ -17,7 +16,7 @@ const AssignmentsTopics = () => {
     useEffect(() => {
         const fetchAmtQuestions = async () => {
             const response = await fetch(
-                'https://projectinnovate-it1e-backend-production.up.railway.app/forum/assignments/numberOfQuestions',
+                'https://projectinnovate-it1e-backend-production.up.railway.app/assignments/numberOfQuestions',
                 {
                     method: 'GET',
                     headers: { Authorization: `Bearer ${user.token}` },
@@ -27,9 +26,9 @@ const AssignmentsTopics = () => {
             const json = await response.json();
 
             if (response.ok) {
-                setHTMLQuestionNum(json[0].HTMLNum);
-                setPHPQuestionNum(json[1].PHPNum);
-                setJAVAQuestionNum(json[2].JAVANum);
+                setHTMLQuestionNum(json.HTMLNum)
+                setPHPQuestionNum(json.PHPNum)
+                setJAVAQuestionNum(json.JAVANum)
             }
         };
 
@@ -53,7 +52,7 @@ const AssignmentsTopics = () => {
                     </Link>
                     <div className="htmlCssAssignments">
                         <h4 className="htmlCss">HTML/CSS</h4>
-                        <p className="assignmentsNumber">{HTMLQuestionNum}</p>
+                        <p className="assignmentsNumber">{HTMLQuestionNum} assignments</p>
                     </div>
                 </div>
                 <div className="htmlCssDesc">
@@ -68,7 +67,7 @@ const AssignmentsTopics = () => {
                     </Link>
                     <div className="phpAssignments">
                         <h4 className="php">PHP</h4>
-                        <p className="assignmentsNumber">{PHPQuestionNum}</p>
+                        <p className="assignmentsNumber">{PHPQuestionNum} assignments</p>
                     </div>
                 </div>
                 <div className="javaContainer">
@@ -77,7 +76,7 @@ const AssignmentsTopics = () => {
                     </Link>
                     <div className="javaAssignments">
                         <h4 className="java">JAVA</h4>
-                        <p className="assignmentsNumber">{JAVAQuestionNum}</p>
+                        <p className="assignmentsNumber">{JAVAQuestionNum} assignments</p>
                     </div>
                 </div>
                 <div className="javaDesc">
